@@ -57,3 +57,5 @@ pushing from Ec2 or other server:
 git config --global --user.name "suresh"  - To push from the different server need config user name 
 git config --global --user.email "devopsmails@gmail.com"
                                           - To push from the different server need config user mail
+--------------
+git game is also avilable free online
