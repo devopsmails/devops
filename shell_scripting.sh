@@ -58,3 +58,113 @@ output:
 Enter your name:                  (We'll Enter the input)
 Suresh
 hi i am Suresh and this is dynmic variable values assigning
+    ------------
+
+Types of Operators:
+==================
+      an operator is a character that represents a specific mathematical or logical action or process.
+
+-eq       : Equals to                       ex: [ $a -eq $b ] when a & b are equals
+-nq       : not equals to                   ex: [ $a -nq $b ] when a & b are not equals
+-gt       : Greater than                    ex: [ $a -gt $b ] when a is greater than b value
+-lt       : Lesser than                     ex: [ $a -lt $b ] when a is lesser than b value
+-ge       : Greater than or Equals to       ex: [ $a -ge $b ] when a is greater than or equals to b value
+-le       : Lesser Than or Equals to        ex: [ $a -le $b ] when a is lesser than  or equal to b value
+
+If-Else:
+========
+    Use if to specify a block of code to be executed, if a specified condition is true. 
+    Use else to specify a block of code to be executed, if the same condition is false.
+    Use else if to specify a new condition to test, if the first condition is false.
+
+  vi ifelse.sh
+
+  #!/bin/bash
+
+echo Enter your age to check Vote Eigibilty:
+read age
+if [ $age -ge 18 ]
+then
+   echo $age is eligible to vote!
+else
+   echo $age not eligible to vote!
+fi
+--------
+sh ifelse.sh 
+
+output:
+------
+Enter your age to check Vote Eigibilty:
+6
+6 not eligible to vote!
+--------------
+
+
+
+vi swithcase.sh
+-----------
+
+echo Make your Choice!
+echo
+echo a=To see the date today!
+echo b=To list all the files in Current Working Directory!
+
+read choice
+
+case $choice in
+        a)date
+        b)ls -ltr
+        *)echo Invalid input!
+esac  
+--------------
+
+switch case:
+===========
+    A case construct helps us to simplify nested if statement.
+vi switchcase.sh
+
+#!/bin/bash
+
+echo Make your Choice!
+echo
+echo a=To see the date today!
+echo b=To list all the files in Current Working Directory!
+
+read choice
+
+case $choice in 
+        a)date ;;
+        b)ls -ltr ;;
+        *)echo Invalid input!
+esac
+
+-----Output--------
+ubuntu@ip-172-31-40-20:~$ sh switchcase.sh 
+Make your Choice!
+
+a=To see the date today!
+b=To list all the files in Current Working Directory!
+b
+total 16
+-rwxrw-r-- 1 ubuntu ubuntu 103 Jul 20 12:25 var.sh
+-rwxrw-r-- 1 ubuntu ubuntu 109 Jul 20 12:35 read.sh
+-----------------------
+
+For Loop:
+================
+     The for loop operate on lists of items. It repeats a set of commands for every item in a list. 
+
+vi forloop.sh
+
+#!/bin/bash
+
+for i in $(seq 1 20)
+do
+  echo number $i
+done
+-------------output---------
+number 1
+number 2
+number 3
+number 4 (....till number 20)
+
