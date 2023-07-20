@@ -168,3 +168,62 @@ number 2
 number 3
 number 4 (....till number 20)
 
+-----------------
+While Loop:
+===========
+        
+    The while loop enables you to execute a set of commands repeatedly until some condition occurs. 
+    It is usually used when you need to manipulate the value of a variable repeatedly.
+    
+vi whileloop.sh
+
+#!/bin/bash
+
+count=0
+num=10
+
+while [ $count -le $num ]
+do
+  echo number $count
+  count=$(expr $count + 1)
+done
+
+-----------output----------
+    
+number 0
+number 1
+number 2 (..till 10)
+-----------------
+Iterrating:
+============
+     Bash iteration statements are simply the repetition of a process within a shell script. 
+     Getting the values from one file to another. 
+vi name.sh or name
+
+Suresh
+Ramesh
+Rakesh
+Mohan
+
+vi iterrate.sh
+
+#!/bin/bash
+
+names="/home/ubuntu/name.sh"
+
+for name in $(cat $names)
+do
+  echo $name
+done
+----
+sh iterrate.sh
+----output-----
+Suresh
+Ramesh
+Rakesh
+Mohan
+
+But when we cat the file be the same only the out changes. 
+    
+
+
