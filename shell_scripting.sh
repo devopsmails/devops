@@ -3,14 +3,38 @@ What is shell script?
 Consist a set of commands to perform a task.
 All the executes sequentially.
 Some tasks like file manipulations, Program Executions, User interactions, Automation Tasks can be done. 
+===================================
 
+Advantages of shell Script?
+
+ Can Aviod Repetative tasks
+     Keeps history of config
+     Share the instructions with others to do the same.
+     logic & Bulk Operations
+============================
+Advantages of writing shell script in a file?
+==========================
+File is movable
+        copy
+        share
+        store
+
+=========================
+What is Shell Script?
+====================
+ A file that contains bunch of linux commands
+ can write more complex code in it
+ It has ".sh" Extenstion for it
+
+======================
 Types of Shells?
-
+====================
 Bourne Shell
 Bourne Again Shell
 Korn Shell
 C Shell
 Tcsh Shell
+===========================
 
 what is #!/bin/bash ? (shebang)
 used to instruct the operating system to use bash as a command interpreter. 
