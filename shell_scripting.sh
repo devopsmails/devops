@@ -1,6 +1,7 @@
 What is shell script?
 
 Consist a set of commands to perform a task.
+It's an interface betwwen user and OS kernal.
 All the executes sequentially.
 Some tasks like file manipulations, Program Executions, User interactions, Automation Tasks can be done. 
 ===================================
@@ -35,6 +36,12 @@ Korn Shell
 C Shell
 Tcsh Shell
 ===========================
+Different shell implemetaions
+========================
+shell(bourne shell)                                           bash(bourne again shell)
+/bin/sh                                                       /bin/bash
+old default version along with OS                             Current default version along with OS
+=================================
 
 what is #!/bin/bash ? (shebang)
 used to instruct the operating system to use bash as a command interpreter. 
