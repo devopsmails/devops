@@ -52,9 +52,13 @@ Commands:
 PWD                                : Present Workind Directory
 ls -lrt                            : List all the directories including hidden
 echo $0                            : Shows the which shell it's using as 
+touch var.sh                       : Only cretes the file
+ls /bin/bash                       : lists all the files in on bash directory if it has any
 
+====================
 Creating Variables:
 ===========
+
 vi Var.sh                           : vi = editor & creates & opens a file var.sh
 
 #!/bin/bash
