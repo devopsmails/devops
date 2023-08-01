@@ -21,5 +21,6 @@ java --version
 javac --version
 
 sudo systemctl status jenkins
-
+sudo hostnamectl set-hostname JENKINS-SERVER
+sudo systemctl reboot
 
