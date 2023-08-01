@@ -30,3 +30,17 @@ JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64
 PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
 .\
 
+./configuring maven to jenkins
+
+install plugin:
+  Maven Integration 
+Jenkins Dashboard: Manage Jenkins >> tool configuration >>
+Jdk:
+====
+add jadk >> name: java_11
+            JAVA_HOME: /usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64
+Maven:
+=====
+add Maven: name: maven
+           MAVEN_HOME: /opt/maven
+.\
