@@ -3,7 +3,9 @@ Github:
 DevOps tools installation scripts:
   github: https://github.com/vikash-kumar01/installation_scripts/tree/master
   youtube: https://www.youtube.com/watch?v=g-v9AsubOqY&list=PLLu1bCv5AByHFz0yycjbp_I5G9NTGF2Cw
-      
+Java project github link:
+  https://github.com/Ashfaque-9x/registration-app.git
+  yt: https://youtu.be/5_s7EmZWz78
 Download & installation jenkins on AWS:
 ===================================
 https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/#downloading-and-installing-jenkins
