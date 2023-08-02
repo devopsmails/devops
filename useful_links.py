@@ -9,4 +9,7 @@ Java project github link:
 Download & installation jenkins on AWS:
 ===================================
 https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/#downloading-and-installing-jenkins
-  
+
+Installing kubectl on aws Linux AMI:
+=====================
+https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
