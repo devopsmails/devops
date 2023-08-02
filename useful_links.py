@@ -9,7 +9,7 @@ Java project github link:
   GH-COMMANDS: https://github.com/Ashfaque-9x/Scripts/blob/main/DevOps-Project-with-Jenkins-Maven-and-Kubernetes.txt
 Download & installation jenkins on AWS:
 ===================================
-Dco: https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/#downloading-and-installing-jenkins
+Doc: https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/#downloading-and-installing-jenkins
 
 Installing kubectl on aws Linux AMI:
 =====================
