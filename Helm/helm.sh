@@ -56,3 +56,28 @@ vi values.yaml
 change replicas 2
 helm upgrade releasename helmchartname
 helm list -a  #we can see all how many replicas are active & deployed too. 
+variabling:
+--------
+We can variables the Deployment & service yaml files.
+vi Values.yaml
+service:
+  Type: Nodeport
+  Port: 80
+If i want the above variables to be enabled for deploymet or services yaml. 
+Do it by going to the (VI FILENAME) file where we want to variablise as below.
+
+Go to Change variable>>
+ex: 
+service:
+  Type: (( .Values.service.type ))
+  Port: (( .Values.service.port ))
+
+helm template releasename chart name - ( can see updated variables in the templates)
+-----------
+Rollback: Going back to working old version
+-----------
+ex:
+need to change some values like above and install the release.
+So the revision number will be increased with the executed changes.
+Rollback
+helm rollback releasename Revisonnumber - Rollback successfull & happy rollback
