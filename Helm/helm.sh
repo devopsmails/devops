@@ -47,4 +47,12 @@ helm list -a
 helm delete #helmchartname
 helm lint #To check any bugs in the code before going to production
 helm template
+helm install releasename --dry-run --debug helmchartname  - To check the dry run
 helm install
+helm list -a
+helm delete releasename
+rm -rf helmchartname
+vi values.yaml
+change replicas 2
+helm upgrade releasename helmchartname
+helm list -a  #we can see all how many replicas are active & deployed too. 
