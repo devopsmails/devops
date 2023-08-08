@@ -1,0 +1,320 @@
+YT: https://youtu.be/8KZi7KBpk0I
+
+aws:
+=====
+EC2:
+Jenkins;
+--------
+name: Jenkins
+AMI: Ubuntu-20.04 LTS
+Instance type: t2.medium
+Keypair: Key1
+sg: inbound: alltrafic anywhereipv4
+storage: 20
+Launch instance
+-----------
+Sonarqube:
+---------
+name: SonarQube
+AMI: Ubuntu-20.04 LTS
+Instance type: t2.medium
+Keypair: Key1
+sg:  inbound: alltrafic anywhereipv4
+storage: 20
+Launch instance
+----------------
+Nexus:
+-------
+name: Nexus
+AMI: Ubuntu-20.04 LTS
+Instance type: t2.medium
+Keypair: Key1
+sg: inbound:8081
+storage: 20
+Launch instance
+---------------
+Kubernetes(2 servers):
+--------
+name: K8
+AMI: Ubuntu-20.04 LTS
+Instance type: t3.medium
+Keypair: Key1
+sg: inbound: alltrafic
+storage: 20
+Number of instances: 2
+Launch instance
+----------------
+On Jenkins server:
+___
+java & jenkins installations:
+---------
+sudo apt update -y
+
+sudo apt upgrade -y 
+
+sudo apt install openjdk-11-jre -y
+
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update -y 
+sudo apt-get install jenkins -y
+sudo service jenkins start
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+      -------
+ Docker: (To Use Docker commands on Jenkins should install Docker on Jenkins Machines)
+
+ 
+============
+on Sonar Server
+SonarQube installations:
+------------
+sudo apt update -y
+
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable" -y
+
+sudo apt upgrade -y
+
+sudo apt update -y
+
+apt-cache policy docker-ce -y
+
+sudo apt install docker-ce -y
+
+sudo chmod 777 /var/run/docker.sock
+
+sudo systemctl status docker
+docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+---------------
+nexus installations:
+sudo su
+ex: 
+root@ip-172-31-88-139:/home/ubuntu#
+ 
+apt-get update -y
+
+echo "Install Java"
+apt-get install openjdk-8-jdk -y
+java -version
+
+echo "Install Nexus"
+useradd -M -d /opt/nexus -s /bin/bash -r nexus
+echo "nexus ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/nexus
+
+mkdir /opt/nexus
+wget https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.29.2-02-unix.tar.gz
+
+tar xzf nexus-3.29.2-02-unix.tar.gz -C /opt/nexus --strip-components=1
+chown -R nexus:nexus /opt/nexus
+
+vi /opt/nexus/bin/nexus.vmoptions
+#in The file 
+# ../sonatype-
+# need to change to 
+# ./sonatype- in 4 places; wq!
+------------
+ vi  /opt/nexus/bin/nexus.rc
+
+#run_as_user=""
+to 
+run_as_user="nexus"
+:wq!
+
+start nexus
+
+sudo -u nexus /opt/nexus/bin/nexus start
+
+-----------
+Jenkins web access:
+jenkins ec2:public ip: 8080
+
+install suggested plugins
+Username: Suresh_Jenkins
+PWD: Jenkins
+Full name: Suresh
+E-mail address: Devopsmails1@gmail.com
+
+----------
+sonarwebaccess:
+sonar ec2:public ip: 9000
+username: admin
+pwd: admin
+changed: Admin
+------------
+nexus webaccess:
+nexus ec2:pubip:8081
+
+username: admin
+pwd:
+on nexus server: 
+cat /opt/nexus/sonatype-work/nexus3/admin.password
+copy paste the pwd:
+newpwd: nexus
+
+check:Enable anonymous access
+----------
+
+K8 installations:
+---------
+
+On Master & node:
+----------
+
+Step1:
+On Master & worker node
+sudo su
+apt-get update  
+apt-get install docker.io -y
+service docker restart  
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -  
+echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" >/etc/apt/sources.list.d/kubernetes.list
+apt-get update
+apt install kubeadm=1.20.0-00 kubectl=1.20.0-00 kubelet=1.20.0-00 -y  
+
+Step2:
+On Master:
+   kubeadm init --pod-network-cidr=192.168.0.0/16
+need to enable  Security Group: 6433 port or All trafic
+   >Copy the token and paste it into the worker node.
+
+
+Step3:
+On Master: 
+  exit
+    mkdir -p $HOME/.kube
+    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+    sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
+step4:
+On Master:
+kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
+
+
+Our Kubernetes installation and configuration are complete
+============
+Integrating sonarqube with jenkins
+=========
+Manage Jenkins >> manage plugins >> Available plugins >>
+SonarQube ScannerVersion
+Sonar Quality Gates
+Quality Gates
+Sonar Gerrit
+SonarQube Generic Coverage
+install without restart.
+----------
+Sonar Quality report:
+
+on sonarqube Dashboard:
+==========
+type1:
+administartions:
+security>
+
+Type2:
+----
+sonar dashboard:
+
+Top right corner user icon>>
+security >>
+(The below is same for both the types)
+users> token list icon> 
+Generate Tokens
+Name: 
+jenkins
+expires in : never, Generate
+token: 
+squ_87fcc376a6841b43410fdf02b7d3d2c863b7fab0
+-------
+Manage jenkins >> system >> ctrl + F:  SonarQube servers
+check: Environment variables
+SonarQube installations:
+Name: sonar-server
+Server URL: http://18.206.125.200:9000
+Server authentication token:
+sonar-token
+ -----
+
+sonar Quality  gate status to Jenkins
+==========
+on sonarqube Dashboard:
+
+Adminisration >> Cinfigurations >> Webhooks >> 
+name: jenkins
+URL: (Jenkins url to send to report)
+http://54.197.73.238:8080/sonaqube-webhook/
+create
+----------------
+
+Jenkins Dash board:
+New item >>
+name: Mr. Devops_java_ci
+type: Pipeline
+create:
+--------
+Pipeline:
+====
+stage: Git Checkout
+Definition:
+Pipeline Script from SCM
+
+SCM:
+Git
+
+Repositories:
+https://github.com/devopsmails/mrdevops_nexus_helm_cicd_app.git
+
+Branches to build:
+Branch Specifier:
+*/main
+
+Script Path:(if Jenkins file is created somewhere ned to mention that path /../../Jenkinsfile)
+Jenkinsfile
+      apply & save
+      ------------
+Pipeline syntax:
+Steps:
+Sample Step:
+select: 
+WithSonarQubeEnv: ...
+
+Server authentication token:
+Select: 
+sonar-token
+Generate Pipeline Script & copy syntax to jenkinsfile
+(ex:
+withSonarQubeEnv(credentialsId: 'sonar-token') {
+    // some block
+})
+----------
+As using Agent Docker
+========
+Need to install plugins:
+---------
+Docker
+Dcoker pipeline
+and need to install docker on Jenkins machine:
+--------------------
+stage:Sonar Quality Check
+==
+Need to install maven on jenkins
+sudo apt-get update & install maven -y
+
+------------
+Stage: Sonar Quality Gate status
+
+sonar webhook should be set up with jenkins IP to send the status
+
+jenkins pipeline syntax:
+
+waitforqualitygatestatus
+
+
+
