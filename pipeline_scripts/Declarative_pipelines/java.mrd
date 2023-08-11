@@ -29,7 +29,7 @@ name: Nexus
 AMI: Ubuntu-20.04 LTS
 Instance type: t2.medium
 Keypair: Key1
-sg: inbound:8081
+sg: inbound:8081-8083
 storage: 20
 Launch instance
 ---------------
@@ -315,6 +315,334 @@ sonar webhook should be set up with jenkins IP to send the status
 jenkins pipeline syntax:
 
 waitforqualitygatestatus
+-----------
+nexus gui:
+----
+nexus server IP & 8081
+
+Integration Nexus with Jenkins:
+==============
+Nexus Dashboard:
+Settings symbol>>repositories>>click: Create repositories:
+in seen list :
+Click: docker (hosted)>>
+Name: (meaningful:) docker-hosted
+check: HTTP>>port 8083
+click: Create repository
+             -------
+Click: Browse
+click: Created repo name to view artifats in the file!
+
+ ============
+On Jenkins Server:
+==========
+sudo su
+cd /var/lib/jenkins/workspace/Mr.devops_java_ci
+github:
+https://github.com/vikash-kumar01/CICD_Java_gradle_application/wiki
+CLICK:
+Creating Docker hosted repository in Nexus and pushing the docker image through Jenkins>>
+At page end:
+>> vi /etc/docker/daemon.json
+{ "insecure-registries":["nexus_machine_ip:8083"] }
+replace nexus_machine_ip with nexus ip address
+{ "insecure-registries":["34.238.232.93:8083"] }
+:wq!
+
+systemctl restart docker
+docker info:
+if the above 34.238.232.93:8083 is configured >>
+Need to docker login to nexus repo to push arti:
+>>
+docker login -u admin -p nexus 34.238.232.93:8083
+result:
+Login Succeeded
+-----
+Jenkins dashboard:
+--------------
+pipeline syntax:
+---------
+withcredentials:(to variable Nexus_password)
+secrettext:******(nexus)
+userid:nexus_cred_pwd
+withCredentials([string(credentialsId: 'nexus_cred_pwd', variable: 'nexus_pwd')])
+
+Creating Environment Variable: for versioning
+-----
+pipeline{
+
+    agent any
+    environment{
+
+        VERSION="${env.BUILD_ID}"
+
+    }
+
+current stage:
+--------
+stage ('Docker image build & docker push Nexus repo'){
+
+            steps{
+                
+                script{
+                    withCredentials([string(credentialsId: 'nexus_cred_pwd', variable: 'nexus_pwd')]) {
+                        sh '''
+                            docker build -t 34.238.232.93:8083/springapp:${VERSION} . 
+
+                            docker login -u admin -p  $nexus_pwd 34.238.232.93:8083
+                            docker push 34.238.232.93:8083/springapp:${VERSION}
+                            docker rmi 34.238.232.93:8083/springapp:${VERSION}
+                        '''
+                    }
+                }
+            }
+        }
+
+we can refresh & check on Nexus repo:
+---------------------
+E-mail alert configuring to jenkins:
+==================
+github:
+https://github.com/vikash-kumar01/CICD_Java_gradle_application/wiki/Configuring-mail-server-in-Jenkins-(-Gmail-)
+
+Manage Jenkins >> plugins >>
+installed:default will be downloaded
+
+Email Extension Plugin 
+------
+Manage Jenkins >> E-mail Notification >>
+SMTP server:
+smtp.gmail.com
+
+click>>advanced:
+
+check: Use SMTP Authentication
+username: (sender usermail):
+devopsmails1@gmail.com
+
+same mail >> manage account>>
+apps password:
+select app:
+other:
+Jenkins 
+click Generate
+kcqusaxwqdmwvhid
 
 
+copy pate in email-notification >> password:
+kcqusaxwqdmwvhid
 
+check: Use SSL
+
+
+Test configurations:
+test email-recepient:
+devopsmails1@gmail.com
+Click: test configure
+result will be succeeded and mail would be sent to recepient
+   ----------------
+
+mandatory:
+To send the custom mails as per pipeline success or fails
+
+ manage Jenkins >> system>>Extended E-mail Notification>>
+SMTP server
+smtp.gmail.com
+SMTP Port
+465
+
+Credentials:
+
+click: Add>> Jenkins >>
+kind: 
+username & password
+
+Username:
+devopsmails1@gmail.com
+password:(apps password created one copied)
+kcqusaxwqdmwvhid
+id:
+gmail_auth
+des:
+gmail_auth
+
+credentials:
+select the created user id gmail_auth
+          
+Default Content Type
+HTML(text/html)
+
+appy & save
+
+-----------------------
+
+Installing Helm datree on Jenkins server:
+============
+sudo su
+passwd jenkins
+sudo su
+~
+-----
+
+# HELM INSTALL 
+
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+
+chmod 700 get_helm.sh
+
+./get_helm.sh
+
+helm 
+to check helm is installed properly
+
+
+# Datree.io Install 
+apt-get install unzip
+curl https://get.datree.io | /bin/bash
+datree version
+----------------
+
+installing datree.io for Identifying misconfigs in Helm Charts using Datree
+https://hub.datree.io/
+integrations>>helm plugins >>
+on jenkins:
+su - jenkins
+
+
+helm plugin install https://github.com/datreeio/helm-datree
+helm plugin update datree
+helm datree test [CHART_DIRECTORY] 
+ex: .
+helm datree test .
+
+datree block:
+
+stage ('Identifying misconfigs in Helm Charts using Datree'){
+            steps{
+                script{
+                   dir('kubernetes/myapp/') {
+                    
+                        sh 'helm datree test .'
+                    } 
+                }
+            }
+
+        }
+---
+Pushing passed to helm charts to helm hosted nexus-repo
+=====================
+on Nexus dash board:
+Settings>> Rositories >> create repo >> click on : helm(hosted)
+reponame: helm-repo
+click: Create repo
+-------
+On jenkinsfile:
+----------
+pushing helm repo block:
+github:
+https://github.com/vikash-kumar01/CICD_Java_gradle_application/wiki/Creating-Helm-hosted-repository-in-Nexus-and-Pushing-the-helm-charts
+
+=======================Jenkins file=====================
+pipeline{
+
+    agent any
+    environment{
+
+        VERSION="${env.BUILD_ID}"
+
+    }
+    stages {
+
+        stage ('Sonar Quality Check'){
+
+            steps{
+                script{
+                    withSonarQubeEnv(credentialsId: 'sonar-token') {
+                        sh " mvn clean package sonar:sonar"
+                    }
+
+                }
+            }
+        }
+
+        stage ('Sonar Quality Gate status'){
+
+            steps{
+                script{
+                    waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token'
+                }
+            }
+        }
+
+        stage ('Docker image build & docker push Nexus repo'){
+
+            steps{
+                
+                script{
+                    withCredentials([string(credentialsId: 'nexus_cred_pwd', variable: 'nexus_pwd')]) {
+                        sh '''
+                            docker build -t 34.238.232.93:8083/springapp:${VERSION} . 
+
+                            docker login -u admin -p  $nexus_pwd 34.238.232.93:8083
+                            docker push 34.238.232.93:8083/springapp:${VERSION}
+                            docker rmi 34.238.232.93:8083/springapp:${VERSION}
+                        '''
+                    }
+                }
+            }
+        }
+
+        stage ('Identifying misconfigs in Helm Charts using Datree'){
+            steps{
+                script{
+                   dir('kubernetes/myapp/') {
+                        withEnv(['DATREE_TOKEN=2e926442-314b-4166-8007-9e47dd366c14']) {
+                        sh 'helm datree test .'
+                        }
+                    } 
+                }
+            }
+        }
+        stage('Pushing the helm to charts Nexus repo'){
+            steps{
+                script{
+                    withCredentials([string(credentialsId: 'nexus_cred_pwd', variable: 'nexus_pwd')]) {
+                        dir('kubernetes/') {
+                            sh'''
+                            helmversion=$(helm show chart myapp | grep version | cut -d: -f 2| tr -d ' ')
+                            tar -cvzf myapp-${helmversion}.tgz myapp/
+                            curl -u admin:$nexus_pwd http://34.238.232.93:8081/repository/helm-repo/ --upload-file myapp-${helmversion}.tgz -v
+                            '''
+                        }    
+
+                    }
+
+                }
+            }
+        }
+    }
+    post {
+		always {
+			mail bcc: '',
+            body: "<br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", 
+            cc: '', 
+            charset: 'UTF-8', 
+            from: '', mimeType: 'text/html', 
+            replyTo: '', 
+            subject: "${currentBuild.result} CI: Project name -> ${env.JOB_NAME}", 
+            to: "devopsmails1@gmail.com";  
+		}
+	}
+}
+===================Docker file=================
+FROM maven as build
+WORKDIR /app
+copy . .
+RUN mvn install
+
+FROM openjdk:11.0
+WORKDIR /app
+COPY --from=build /app/target/*.jar /app/
+EXPOSE 8080
+CMD ["java", "-jar","/app/*.jar"]
+=======================
