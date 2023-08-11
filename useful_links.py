@@ -14,3 +14,8 @@ Doc: https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS
 Installing kubectl on aws Linux AMI:
 =====================
 Doc: https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+
+datree(Helm charts misconfigs identifier)
+=======================
+https://hub.datree.io/
+
