@@ -33,5 +33,36 @@ java -jar agent.jar -jnlpUrl http://54.197.73.238:8080/computer/agent2/jenkins-a
 jnlp -secret 722b9521453499468916408b3c49c5be84dc325896d7956ffcdd87304236513c -workDir "/home/jenkins"
 **************************end it states connected***************
 
+We can manage jenkins>> nodes & clouds
+The agent is online(=no cross red mark)
+===================
+pipeline script:
+================
 
+pipeline {
+####################
+    agent {
+        label 'java_agent'
+    }
+#################### 
+    stages {
+        stage ('Git Cloning'){
+            steps{
+                script {
+                        git branch: 'main', credentialsId: 'GitHub_Access_Token', url: 'https://github.com/devopsmails/devops.git'    
+                }
+            }
+        }
+        
+        stage ('Success cloning'){
+            steps {
+                script {
+                    sh '''
+                    echo "Cloning succeeded"
+                    '''
+                }
+            }
+        }
+    }
+}
 
