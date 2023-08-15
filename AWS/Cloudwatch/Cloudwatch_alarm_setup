@@ -21,6 +21,14 @@ Advantages:
   Scaling
 
 =====================
+Dash Board:
+=====================
+We can a dash board any tipe of metrics
+Create dash board: number>>
+select the service : EX:EC2 >> per-instance >> select the instance & metrics we just want to see the overview >> 
+Click Dash board >> 
+We can see beautiful metics with all the different colours refering to different metric & service
+==========================
 Logging: (Even if we loose the logs of any build of EC2 or any service it'll be tracked here with very exactly clear error sucess note line by line)
 ==========
 AWS DASHBOARD >> search cloudwatch >> logs>>
