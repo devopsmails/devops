@@ -18,4 +18,10 @@ Doc: https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
 datree(Helm charts misconfigs identifier)
 =======================
 https://hub.datree.io/
+================
 
+AWS API -boto3-doc
+    As per service specific we can find service + boto3. doc
+
+EX: ec2 boto3 doc
+https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html
