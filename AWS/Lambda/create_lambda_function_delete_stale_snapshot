@@ -50,3 +50,61 @@ def lambda_handler(event, context):
   =================================================
 save & deploy.
 Test
+--------
+error1:
+  "errorMessage": "An error occurred (UnauthorizedOperation) when calling the DescribeSnapshots operation: You are not authorized to perform this operation."
+ --------Requires IAM snapshot list & delete -------------
+Sol:
+Lamda>> configuration >> permissions >> click: Role name: Cost-optimization-snapshot-role-6mgee58o
+Addpermissions >> Attach policy >>Crate Policy >>
+Select a service: EC2
+Actions allowed
+List
+DescribeSnapshots
+
+Write
+DeleteSnapshot
+Resources;
+all
+next
+
+policy name: cost-optimization-snapshot
+Create policy
+
+IAM ROLE:
+Search &  check: cost-optimization-snapshot
+add permissions(Policy was successfully attached to role.)
+-------
+test
+error-2
+  "errorMessage": "An error occurred (UnauthorizedOperation) when calling the DescribeInstances operation: You are not authorized to perform this operation.",
+sol:-------needs ec2 discribe to check snapshot is attached to EC2-------
+Lamda>> configuration >> permissions >> click: Role name: Cost-optimization-snapshot-role-6mgee58o
+Addpermissions >> Attach policy >>Crate Policy >>
+Select a service: EC2
+Actions allowed
+List
+DescribeInstances
+
+DescribeVolumes
+Resources;
+all
+next
+
+policy name: cost-optimization-snap-ec2-permission
+Create policy
+
+IAM ROLE:
+Search &  check: cost-optimization-snap-ec2-permission
+add permissions(Policy was successfully attached to role.)
+------------Test-----
+status: success
+EC2 Dashboard; We can still see the snapshot is not deleted. because it's attched EC2 java-agent
+Terminate the java-agent EC2 instance
+---------
+Lambda >code >test
+status: Success
+log:
+Deleted EBS snapshot snap-0d5c4d0e6b94a72a0 as its associated volume was not found.
+goto snapshots refresh snap-0d5c4d0e6b94a72a0 would have been deleted. 
+==============================
