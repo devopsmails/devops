@@ -2,14 +2,16 @@ YT:   https://youtu.be/bCS9m5RVPyo
 GH:   https://github.com/iam-veeramalla/aws-devops-zero-to-hero/tree/main
 
 
-What is Load Balencer?
+What is Load Balencer? = Trafic Routing
+=======================
 
 / A load balancer acts as the “traffic cop” sitting in front of your servers and 
 routing client requests across all servers capable
 of fulfilling those requests in a manner that maximizes speed and 
 capacity utilization and ensures that no one server is overworked, which could degrade performance. \
 
-What is OSI Layers?
+What is OSI Layers? = Layers in Trafic Routing
+========================
 
 This model is called Open System Interconnection (OSI) 
 because this model allows any two different systems to communicate regardless of their underlying architecture.
