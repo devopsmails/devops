@@ -25,7 +25,7 @@ Perform troubleshooting,by identifying which network layer is causing an issue a
 ==============OSI Layers==================
      +-----------------7-------------------------+
      | Application Layer                        |
-     | (Protocols: HTTP, FTP, SMTP, etc.)        |
+     | (Protocols: HTTP, FTP, SMTP, etc.)        |==============APP Load Balencer
      +------------------------------------------+
                       |
                       v
@@ -43,7 +43,7 @@ Perform troubleshooting,by identifying which network layer is causing an issue a
                       v
      +---------------------4---------------------+
      | Transport Layer                          |
-     | (Segmentation, Flow Control, Error Control)|
+     | (Segmentation, Flow Control, Error Control)|===================Network Load Balencer
      +------------------------------------------+
                       |
                       v
@@ -65,3 +65,42 @@ Perform troubleshooting,by identifying which network layer is causing an issue a
      +------------------------------------------+
 ==================================
                   
+ALB  vs NLB VS GWLB
+
+==================
+ALB (Application Load Balancer), NLB (Network Load Balancer), and GWLB (Gateway Load Balancer) 
+are different types of load balancers offered by Amazon Web Services (AWS). 
+Each has specific use cases based on your application's requirements.
+Here's a brief overview of when to use each type:
+
+**ALB (Application Load Balancer):**====hIGH COST===========
+
+Use ALB when you have multiple HTTP/HTTPS applications running on different port numbers or 
+instances and need to distribute incoming traffic based on application layer information 
+(such as URL paths, hostnames, or HTTP headers). ALB is well-suited for routing requests to microservices and containers.
+
+Use Cases:
+- Routing requests to different backend services based on URL paths or hostnames.
+- Load balancing traffic for containerized applications.
+- Providing support for multiple domains with SSL/TLS termination.
+
+**NLB (Network Load Balancer):**==========LOW COST===========
+
+Use NLB when you need to handle TCP/UDP traffic at the transport layer and require high performance, 
+low latency, and the ability to handle millions of requests per second. 
+NLB is ideal for situations where you need to maintain the source IP address of the client.
+
+Use Cases:
+- Distributing traffic to instances for gaming applications or IoT devices.
+- Handling TCP/UDP traffic where source IP preservation is important.
+- Forwarding traffic directly to instances without modifying the request.
+
+**GWLB (Gateway Load Balancer):**
+
+Use GWLB when you have multiple Amazon VPCs (Virtual Private Clouds) and need to route traffic between them. 
+GWLB is designed to route traffic at the network layer (IP protocol) and can handle high throughput.
+
+Use Cases:
+- Load balancing traffic between multiple VPCs.
+- Distributing traffic across VPCs in a regional or cross-regional setup.
+- Routing traffic between VPCs using IP protocol-based rules.
