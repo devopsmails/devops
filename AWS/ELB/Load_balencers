@@ -19,3 +19,47 @@ Advantages of OSI Model
 Determine the required hardware and software to build their network. 
 Understand and communicate the process followed by components communicating across a network. 
 Perform troubleshooting,by identifying which network layer is causing an issue and focusing efforts on that layer.
+
+==============OSI Layers==================
+     +-----------------7-------------------------+
+     | Application Layer                        |
+     | (Protocols: HTTP, FTP, SMTP, etc.)        |
+     +------------------------------------------+
+                      |
+                      v
+     +------------------6------------------------+
+     | Presentation Layer                       |
+     | (Encryption, Compression, Formatting)     |
+     +------------------------------------------+
+                      |
+                      v
+     +-------------------5-----------------------+
+     | Session Layer                            |
+     | (Session Establishment, Synchronization)  |
+     +------------------------------------------+
+                      |
+                      v
+     +---------------------4---------------------+
+     | Transport Layer                          |
+     | (Segmentation, Flow Control, Error Control)|
+     +------------------------------------------+
+                      |
+                      v
+     +----------------------3--------------------+
+     | Network Layer                            |
+     | (Routing, Logical Addressing)             |
+     +------------------------------------------+
+                      |
+                      v
+     +----------------------2--------------------+
+     | Data Link Layer                          |
+     | (Framing, MAC Addressing, Error Detection)|
+     +------------------------------------------+
+                      |
+                      v
+     +----------------------1--------------------+
+     | Physical Layer                           |
+     | (Transmission and Reception of Raw Data)  |
+     +------------------------------------------+
+==================================
+                  
