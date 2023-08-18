@@ -40,10 +40,12 @@ Internet gateways allow traffic to flow between your VPC and the public internet
 
 NAT gateways: 
 ------------
+subnet level security
 NAT gateways allow instances in private subnets to access the internet.
 
 Security groups: 
 -------------
+EC2 level security
 Security groups control inbound and outbound traffic for your instances.
 
 Network Access Control Lists (ACLs): 
