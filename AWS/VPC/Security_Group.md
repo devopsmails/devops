@@ -13,7 +13,7 @@ Inbound Traffic:
 ------------                                              
 Default it'll not allow anything.                                 
 If user want to access the instance or app                    
-We can allow specific ip or specifc ports                     
+We can ONLY allow specific ip or specifc ports not possible for Denying.                   
 
 Inbound Traffic:
 ---------------
