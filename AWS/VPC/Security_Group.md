@@ -6,6 +6,7 @@ Security Groups:
 --------------
 
 Works at instance level
+Second level of security after NACL
 
 Allow/deny 2 ways of traffic
 -----------
