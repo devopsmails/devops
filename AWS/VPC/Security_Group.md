@@ -9,8 +9,15 @@ Works at instance level
 
 Allow/deny 2 ways of traffic
 -----------
-Inbound Traffic:                                              Inbound Traffic:
-------------                                                  ---------------
-Default it'll not allow anything.                             Default it'll  allow every port ecept port 25(mail).    
-If user want to access the instance or app                    If instance or app wants access internet
-We can allow specific ip or specifc ports                     We can allow spefici ip or specifc ports
+Inbound Traffic:                                             
+------------                                              
+Default it'll not allow anything.                                 
+If user want to access the instance or app                    
+We can allow specific ip or specifc ports                     
+
+
+Inbound Traffic:
+---------------
+Default it'll  allow every port ecept port 25(mail).
+If instance or app wants access internet
+We can allow spefici ip or specifc ports
