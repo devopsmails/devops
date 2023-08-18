@@ -49,7 +49,6 @@ Security groups control inbound and outbound traffic for your instances.
 Network Access Control Lists (ACLs): 
 -----------------------------------
 ACLs are similar to security groups, but they control traffic at the subnet level.
-
-________
-
+____
+_____
 
