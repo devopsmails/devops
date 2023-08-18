@@ -18,6 +18,8 @@ We can allow specific ip or specifc ports
 Inbound Traffic:
 ---------------
 Default it'll  allow every port ecept port 25(mail).
+
 If instance or app wants access internet
+
 We can allow spefici ip or specifc ports
 
