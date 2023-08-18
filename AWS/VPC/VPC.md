@@ -21,31 +21,33 @@ The components of a VPC are:
 ============================
 
 VPC CIDR block: 
+--------------
 
 This is the range of IP addresses that are available for your VPC.
 
-Subnets: 
+Subnets:
+---------
 
 Subnets are smaller ranges of IP addresses within your VPC. You can create multiple subnets for different purposes, such as public-facing subnets and private subnets.
 
 Route tables: 
-
+-----------
 Route tables control how traffic flows within your VPC. They define the routes that traffic takes to reach different destinations.
 
 Internet gateways: 
-
+-----------------
 Internet gateways allow traffic to flow between your VPC and the public internet.
 
 NAT gateways: 
-
+------------
 NAT gateways allow instances in private subnets to access the internet.
 
 Security groups: 
-
+-------------
 Security groups control inbound and outbound traffic for your instances.
 
 Network Access Control Lists (ACLs): 
-
+-----------------------------------
 ACLs are similar to security groups, but they control traffic at the subnet level.
 
 ________
