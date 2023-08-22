@@ -12,4 +12,4 @@ scp  -i /Users/sures/Downloads/key1.pem /Users/sures/Downloads/key1.pem ubuntu@5
 
 SSH:  
 ---  
-ssh -i #key.pem ubuntu@#publicip or Private ip  
+ssh -i #key.pem ubuntu@#publicip or Private ip   
