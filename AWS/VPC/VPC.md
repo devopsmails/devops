@@ -1,3 +1,9 @@
+
+![vpc-example-private-subnets](https://github.com/devopsmails/devops/assets/119680288/a010d8bb-7ba3-40ab-9fbb-6207f195bff4)
+
+
+
+
 YT: https://youtu.be/P8g7Z4NYk3Q
 
 GH: https://github.com/iam-veeramalla/aws-devops-zero-to-hero/tree/main/day-4
