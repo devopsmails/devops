@@ -4,10 +4,10 @@ YT: https://youtu.be/FZPTL_kNvXc
 VPC(Isolated Cloud Resource) Creating:
 --
 
-vpc dashboard >> vpc create >> vpc settings:
-Resources to create: VPC and more
-Name tag auto-generation: aws_prod
-IPv4 CIDR block: #10.0.0.0/16
+vpc dashboard >> vpc create >> vpc settings: 
+Resources to create: VPC and more 
+Name tag auto-generation: aws_prod 
+IPv4 CIDR block: #10.0.0.0/16 
 IPv6 CIDR block>:
   check: No IPv6 CIDR block
 uncheck: Amazon-provided IPv6 CIDR block
