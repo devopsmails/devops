@@ -6,5 +6,5 @@ source .bash_profile                            - Update the changes to a file
 
 COPY:  
 --
-Secure Copy:  
+Secure Copy from local to remote server:  
 scp  -i /Users/sures/Downloads/key1.pem /Users/sures/Downloads/key1.pem ubuntu@54.234.208.15:/home/ubuntu  
