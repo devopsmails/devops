@@ -8,3 +8,8 @@ COPY:
 --
 Secure Copy from local to remote server:  
 scp  -i /Users/sures/Downloads/key1.pem /Users/sures/Downloads/key1.pem ubuntu@54.234.208.15:/home/ubuntu  
+    (Key must be as chomod 0600 #key.pem)
+
+SSH:  
+---  
+ssh -i #key.pem ubuntu@#publicip or Private ip  
