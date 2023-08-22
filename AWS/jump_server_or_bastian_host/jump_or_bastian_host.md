@@ -5,7 +5,7 @@ A Bastion Host (or a jump server) is a dedicated computer used to access infrast
 Bastian Host setup?  
   
 EC2 Dash Board >> Create instance >>   
-  name: Bastian Host  
+   > name: Bastian Host  
   ami: ubuntu  
   instance type: t2.micro  
   key pair: #key1  
