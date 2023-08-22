@@ -10,7 +10,7 @@ EC2 Dash Board >> Create instance >>
   instance type: t2.micro  
   key pair: #key1  
   netowrk:  
-    VPC:#gabby-prod-vpc   
+      VPC:#gabby-prod-vpc   
     auto assign public IP: enable  
     create new SG Group:   
       check: ssh(must)  
