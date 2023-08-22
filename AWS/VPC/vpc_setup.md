@@ -90,4 +90,55 @@ Refresh the launch template:
                                     Review   
                                     click: Create auto Scalling group  
             
+  -------------
+What is Bastian Host or Jump Server?  
+
+A Bastion Host (or a jump server) is a dedicated computer used to access infrastructure resources and helps compartmentalize them. From a security perspective, a Bastion host is the only node in the network exposed for external access.    
+
+Bastian Host setup?  
   
+EC2 Dash Board >> Create instance >>   
+> name: Bastian Host  
+  ami: ubuntu  
+  instance type: t2.micro  
+  key pair: #key1  
+  netowrk:  
+  > VPC:#gabby-prod-vpc   
+    auto assign public IP: enable  
+    create new SG Group:   
+      check: ssh(must)
+click: Launch instance  
+----------
+COPY:  
+--
+Secure Copy from local to remote server:  
+scp  -i /Users/sures/Downloads/key1.pem /Users/sures/Downloads/key1.pem ubuntu@54.234.208.15:/home/ubuntu  
+    (Key must be as chomod 0600 #key.pem)
+
+SSH:  
+---  
+ssh -i #key.pem ubuntu@#publicip   
+ls (make sure key.pem is copied)  
+ssh -i #key.pem ubuntu@#Private ip   
+
+Deploying a basic application on Private subnets  
+----
+vi index.html
+copy
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+</body>
+</html>
+
+paste 
+:wq!
+-----
+python3 -m http.server 8000
+(Launching web application on 8000)
