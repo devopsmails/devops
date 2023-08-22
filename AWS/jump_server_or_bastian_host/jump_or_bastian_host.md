@@ -13,5 +13,5 @@ EC2 Dash Board >> Create instance >>
   > VPC:#gabby-prod-vpc   
     auto assign public IP: enable  
     create new SG Group:   
-      check: ssh(must)  
-  click: Launch instance  
+      check: ssh(must)
+click: Launch instance  
