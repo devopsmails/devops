@@ -10,3 +10,9 @@ Load Balancing Setup?
 
 EC2 Dash Board >> Load Balancers >> Create Load Balancers:  
   
+Application Load Balancer >> Create >>
+
+Create Application Load Balancer
+--------
+  * Basic configuration:
+    >Load balancer name: 
