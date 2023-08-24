@@ -14,4 +14,4 @@ Types:
   * Secret Manager(AWS)  
     > Suitable for info which is highly secret(passwords, certifications). It has ""auto Rotate"" facility with high cost  
   * Hashicorp Vault(TF)  
-    > Suitable for Centralized info if using for ""Multiple clouds"",   
+    > Suitable for Centralized info if using for ""Multiple clouds"", Open Source, Community Driven + frequent fetures, Best Encryption than AWS.
