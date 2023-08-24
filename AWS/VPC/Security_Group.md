@@ -16,7 +16,7 @@ Default it'll not allow anything.
 If user want to access the instance or app                    
 We can ONLY allow specific ip or specifc ports not possible for Denying.                   
 
-Inbound Traffic:
+Out bound Traffic:
 ---------------
 Default it'll  allow every port ecept port 25(mail).
 
