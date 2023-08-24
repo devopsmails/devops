@@ -181,5 +181,5 @@ Create Application Load Balancer
       > select the target group created
       >> Click:   Create Load Balencer >>
           >> View Load Balancer >>
-             Take the Load balancer DNS name & check it on the intenet. it will work if not make sure 8000, 80, 22 ports are enabled at SG
+             Take the Load balancer DNS name & check it on the intenet. it will work if not make sure 8000, 80, 22 ports are enabled at SG 
       
