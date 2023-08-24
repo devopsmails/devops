@@ -10,6 +10,8 @@ Types:
 -----
 
 1.System Manager(AWS)  
-    -suitable for info which  is not that secret(Docker hub name, Registry URL...), Low comparatively with secret Manager
-2.Secret Manager(AWS) - Suitable for info which is highly secret(passwords, certifications). It has ""auto Rotate"" facility with high cost
-3.Hashicorp Vault(TF) - Suitable for Centralized info if using for ""Multiple clouds"", 
+    > suitable for info which  is not that secret(Docker hub name, Registry URL...), Low comparatively with secret Manager  
+2.Secret Manager(AWS)  
+    > Suitable for info which is highly secret(passwords, certifications). It has ""auto Rotate"" facility with high cost  
+3.Hashicorp Vault(TF)  
+    > Suitable for Centralized info if using for ""Multiple clouds"",   
