@@ -7,5 +7,23 @@ With just one tool to download and configure, you can control multiple AWS servi
 
 Use of AWS cli?  
 ---------------
+Quick access to AWS 
 The AWS CLI provides direct access to the public APIs of AWS services. You can explore a service's capabilities with the AWS CLI, and develop shell scripts to manage your   
 resources. In addition to the low-level, API-equivalent commands, several AWS services provide customizations for the AWS CLI.  
+
+
+How to install AWS CLI?
+
+pre-requisites:
+aws-cli
+python3
+
+On any linux flavour :
+
+aws cli: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html  
+ -------------Commands from the above link---------
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  unzip awscliv2.zip
+  sudo ./aws/install
+  ------------------------------
+ aws --version (shows the aws cli version & python version if it's installed)
