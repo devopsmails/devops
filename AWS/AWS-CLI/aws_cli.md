@@ -12,11 +12,17 @@ The AWS CLI provides direct access to the public APIs of AWS services. You can e
 resources. In addition to the low-level, API-equivalent commands, several AWS services provide customizations for the AWS CLI.  
 
 
-How to install AWS CLI?
 
-pre-requisites:
+pre-requisites AWS CLI
+-------------------
+
 aws-cli
 python3
+aws access & secret keys  
+
+
+How to install AWS CLI?
+------------------
 
 On any linux flavour :
 
@@ -27,3 +33,17 @@ aws cli: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-instal
   sudo ./aws/install
   ------------------------------
  aws --version (shows the aws cli version & python version if it's installed)
+
+
+How to create AWS Access & Secret access Key?
+
+aws console >> aws account name(top right hand corner) >> security Credentials:  
+
+  * Access keys:
+      *Create access key:
+         If using root access key Preferred to use IAM user:
+           * ck: Continue to create access key?
+              * ck: Create access key
+                 * Download the .csv file(file has access & secret key)
+--------------------- 
+
