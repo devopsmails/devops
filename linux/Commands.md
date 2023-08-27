@@ -78,4 +78,8 @@ Kill - terminate the process
 
 kill -p #name of the process
 
+trap - Commands trap the specific signal type
+--------
+trap "echo don't use the ctrl+c" SIGINT - if any body press ctrl+c in the process of execution. it 'll pop the message. 
+trap "rm -rf" #SIGINIT  - "initialize from starting"
 
