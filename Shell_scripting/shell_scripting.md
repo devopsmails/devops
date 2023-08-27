@@ -116,6 +116,15 @@ If-Else:
 
   #!/bin/bash
 
+  a=10
+  b=20
+  if [$a > $b]
+  then
+     echo "a is greater than b"
+  else
+     echo "b is greater than a"
+  ------------------or---------------
+
 echo Enter your age to check Vote Eigibilty:
 read age
 if [ $age -ge 18 ]
@@ -192,6 +201,23 @@ For Loop:
 vi forloop.sh
 
 #!/bin/bash
+
+for i in {1..10}; do
+  echo $i
+done
+
+result:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+--------------or----------------
 
 for i in $(seq 1 20)
 do
