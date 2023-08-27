@@ -21,3 +21,26 @@ df - disk free
 nproc - shows how many processors are in the instance
 free - show memory detials
 top - What are the processors running, causing more usage of memory..
+
+process:
+-------
+ps -df - lists all the running process in a running format
+ps -df | grep "amazon or ###" - lists only related to amazon
+
+pipe(|) - pipe sends the first command output second command
+-----
+ps -df | grep "amazon or ###" - lists only related to amazon
+vi test.sh
+----
+echo 1
+echo 11
+echo 12
+echo 59
+echo 60
+
+./test.sh | grep 1
+result: 
+--------
+1
+11
+12
