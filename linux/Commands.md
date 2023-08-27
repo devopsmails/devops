@@ -22,6 +22,7 @@ nproc - shows how many processors are in the instance
 free - show memory detials
 top - What are the processors running, causing more usage of memory..
 
+
 process:
 -------
 ps -df - lists all the running process in a running format
@@ -53,13 +54,28 @@ Logfiles:
 --------
 cat /var/log/syslog | grep "error" - shows only the log files filterd with error from syslog
 
-curl: to downalod or Retrive the info from internet or URL
+curl: to Retrive the info from internet or URL & doesn't save
 --
 curl https://us-east-1.console.aws.amazon.com/ec2-instance-connect/ssh?connType=standard&instanceId=i-05b0d00d364ba627d&osUser=ubuntu&region=us-east-1&sshPort=22#/ 
 | grep "error"  
 
 
+wget - Downloads the file & store the file
+---
+wget https://github.com/devopsmails/devops/edit/main/linux/Commands.md #download the commands.md file & store it
+
 man - to view the details info of any command
 ----
 man cat
 man grep
+
+find - Helps to file from huge number of files with the name
+-----
+find / -name pam.d
+
+Kill - terminate the process
+------
+
+kill -p #name of the process
+
+
