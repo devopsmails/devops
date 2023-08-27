@@ -47,4 +47,19 @@ result:
 
 AWK:
 --
-ps -df |grep "amazon" | awk -F " " '{print $1}'    - print all the process name with amozon of column 1
+ps -df |grep "amazon" | awk -F " " '{print $1}'    - print all the process name with amozon of column 1  
+
+Logfiles:
+--------
+cat /var/log/syslog | grep "error" - shows only the log files filterd with error from syslog
+
+curl: to downalod or Retrive the info from internet or URL
+--
+curl https://us-east-1.console.aws.amazon.com/ec2-instance-connect/ssh?connType=standard&instanceId=i-05b0d00d364ba627d&osUser=ubuntu&region=us-east-1&sshPort=22#/ 
+| grep "error"  
+
+
+man - to view the details info of any command
+----
+man cat
+man grep
