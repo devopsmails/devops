@@ -44,3 +44,7 @@ result:
 1
 11
 12
+
+AWK:
+--
+ps -df |grep "amazon" | awk -F " " '{print $1}'    - print all the process name with amozon of column 1
