@@ -73,7 +73,7 @@ sudo systemctl start jenkins.service
 ----------
 
 29/08/2023
-=====================
+------------
 1. What were using ansible for? Were you writting playbooks & what kind of ploybooks your were writting?Were you using ansible-roles?
 Install and configure the Apache web server: This playbook would install and configure the Apache web server on a group of web servers. The playbook would first install the Apache package, then configure the Apache configuration file.
 ---
@@ -140,9 +140,9 @@ Patch systems with the latest security updates: This playbook would patch a set 
       name: security_updates
       state: present
 These are just a few examples of the types of Ansible playbooks that I have written. Ansible playbooks can be used to automate a wide variety of tasks, so the possibilities are endless.
-=================
+------------------
 2. what image you use for hostintg https?
-=============================
+-------------------
 When it comes to hosting an HTTPS-enabled application using Docker, the choice of the Docker image depends on a few key factors. One of the most popular choices for hosting web applications is using the NGINX web server. NGINX is well-known for its performance, scalability, and support for SSL/TLS encryption, which is crucial for HTTPS.
 
 For hosting HTTPS-enabled applications using Docker, I would recommend using the official NGINX Docker image. The official images are maintained by the NGINX team and are regularly updated to ensure security and compatibility.
@@ -154,9 +154,9 @@ docker run -d \
   -v /path/to/your/ssl/certificates:/etc/nginx/ssl \
   -v /path/to/your/app:/usr/share/nginx/html \
   nginx
-===============================
+-----------------------------
 3. How do you configure Nexus & How do  you access nexus?
-=================================
+-----------------------------
 Configuring Nexus, a repository manager used for storing and managing artifacts, involves several steps. Here's a general outline of how to configure Nexus and how to access it:
 
 1. Install Nexus:
@@ -193,10 +193,9 @@ For example, if you've set up a Maven repository, you can configure your Maven s
 
 It's crucial to secure your Nexus installation to prevent unauthorized access and data breaches.
 Update the default admin password and create strong passwords for other users.
-==========================
-
+-----------------------------
 4. How do you attach/create an instance in existing subnet?
-================================
+-----------------------------
 
 provider "aws" {
   region = "us-east-1"  # Replace with your desired region
@@ -211,9 +210,9 @@ resource "aws_instance" "example_instance" {
 terraform init
 terraform plan
 terraform apply
-========================
+-----------------------------
 6. How do you configure cloud watch to n number instances for 2 way communications using terraform?
-========================
+-----------------------------
 resource "aws_instance" "communication_instance" {**************
   count        = 10
   ami          = "ami-12345678"
@@ -245,5 +244,5 @@ resource "aws_cloudwatch_metric_alarm" "communication_cpu_alarm" {
 resource "aws_sns_topic" "notification_topic" {
   name = "CommunicationCpuNotificationTopic"
 }
-========================
+-----------------------------
 
