@@ -1,8 +1,9 @@
 28/08/2023
-
+-----------------
 1.How do you restrict the port access from linux firewall apart from SG, NACL, VPC?
   ufw would auto installed as firewall
   ufw allow / deny port number
+--------------------
 
 2. How can a user ssh with out using .pem file?
   2 ways possible
@@ -11,7 +12,7 @@
       PermitRootLogin yes
       sudo service sshd restart
       ssh username@ec2-instance-ip-address
-   ---
+---
    
 In the given scenario, it is possible for user Ramu to SSH to the Ubuntu instance without a .pem file if you have previously added their
 public key to the instance's authorized_keys file.To do this, you would first need to generate the public key for Ramu's account. 
@@ -24,7 +25,7 @@ ssh ramu@ubuntu-ip
 
 4. How to make one docker-compose to communicate with other docker-compose file?
   To make one Docker Compose to communicate with other Docker Compose file, you can use the following steps:
-
+--------------------
 Create a common network in the Docker Compose file of one project.
 Set the network to connect to in the other project's Docker Compose.
 Set up the network for all services we want to be connect.
@@ -50,7 +51,7 @@ networks:
   common:
 
 5. java -jar jenkins.war - This commands runs an application but when closes application stops. How to create a service & run  continously?
-
+-----------------
 Create a systemd unit file.
 Enable and start the service.
 Here is an example of a systemd unit file for a service that runs the java -jar jenkins.war command:
