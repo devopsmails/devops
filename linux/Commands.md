@@ -83,3 +83,123 @@ trap - Commands trap the specific signal type
 trap "echo don't use the ctrl+c" SIGINT - if any body press ctrl+c in the process of execution. it 'll pop the message. 
 trap "rm -rf" #SIGINIT  - "initialize from starting"
 
+1) System
+uname	 Displays  Linux system information
+uname -r	Displays  kernel release information
+uptime	Displays how long the system has been running including load average
+hostname	Shows the system hostname
+hostname -i	Displays the IP address of the system
+last reboot	Shows system reboot history
+date	Displays current system date and time
+timedatectl	Query and change the System clock
+cal	Displays the current calendar month and day
+w	Displays currently  logged in users in the system
+whoami	Displays who you are logged in as
+man	Used to help about that command
+2) Hardware
+dmesg	Displays bootup messages
+cat /proc/cpuinfo	Displays more information about CPU e.g model, model name, cores, vendor id
+cat /proc/meminfo	Displays more information about hardware memory e.g. Total and Free memory
+lshw	Displays information about system’s hardware configuration
+free -m	Displays free and used memory in the system (-m flag indicates memory in MB)
+lspci -tv	Displays PCI devices in a tree-like diagram
+lsusb -tv	Displays USB devices in a tree-like diagram
+dmidecode	Displays hardware information from the BIOS
+3) Users
+id	Displays the details of the active user e.g. uid, gid, and groups
+last	Shows the last logins in the system
+who	Shows who is logged in to the system
+groupadd “admin”	Adds the group ‘admin’
+adduser “Sam”	Adds user Sam
+userdel “Sam”	Deletes user Sam
+usermod	Used for changing / modifying user information
+4) File Commands
+ls -al	Lists files – both regular &  hidden files and their permissions as well.
+pwd	Displays the current directory file path
+mkdir ‘directory_name’	Creates a new directory
+rm file_name	Removes a file
+rm -f filename	Forcefully removes a file
+rm -r directory_name	Removes a directory recursively
+rm -rf directory_name	Removes a directory forcefully and recursively
+cp file1 file2	Copies the contents of file1 to file2
+cp -r dir1 dir2	Recursively Copies dir1 to dir2. dir2 is created if it does not exist
+mv file1 file2	Renames file1 to file2
+ln -s /path/to/file_name   link_name	Creates a symbolic link to file_name
+touch file_name	Creates a new file
+cat > file_name	Places standard input into a file
+more file_name	Outputs the contents of a file
+head file_name	Displays the first 10 lines of a file
+tail file_name	Displays the last 10 lines of a file
+gpg -c file_name	Encrypts a file
+gpg -d file_name.gpg	Decrypts a file
+wc	Prints the number of bytes, words and lines in a file
+xargs	Executes commands from standard input
+5) File Permission
+chmod octal filename        	Change file permissions of the file to octal
+Example	 
+chmod 777 /data/test.c      	Set rwx permissions to owner, group and everyone (everyone else who has access to the server)
+chmod 755 /data/test.c      	Set rwx to the owner and r_x to group and everyone
+chmod 766 /data/test.c       	Sets rwx for owner, rw for group and everyone
+chown owner user-file        	Change ownership of the file
+chown owner-user:owner-group file_name      	Change owner and group owner of the file
+chown owner-user:owner-group directory  	Change owner and group owner of the directory
+6) Network
+ipaddress show                   	Displays IP addresses and all the network interfaces
+ifconfig                            	Displays IP addresses of all network interfaces
+ping  host                       	ping command sends an ICMP echo request to establish a connection to server / PC
+whois domain                 	Retrieves more information about a domain name
+dig domain                      	Retrieves DNS information about the domain
+dig -x host                   	Performs reverse lookup on a domain
+host google.com          	Performs an IP lookup for the domain name
+hostname -i                     	Displays local IP address
+wget file_name            	Downloads a file from an online source
+netstat -pnltu     	Displays all active listening ports
+7) Compression/Archives
+tar -cf home.tar home<:code>	Creates archive file called ‘home.tar’ from file ‘home’
+tar -xf files.tar             	Extract archive file ‘files.tar’
+tar -zcvf home.tar.gz source-folder   	Creates gzipped tar archive file from the source folder
+gzip file 	Compression a file with .gz extension
+8) Install Packages
+rpm -i pkg_name.rpm           	Install an rpm package
+rpm -e pkg_name                     	Removes an rpm package
+dnf install pkg_name	Install package using dnf utility
+9) Install Source (Compilation)
+./configure	Checks your system for the required software needed to build the program. It will build the Makefile containing the instructions required to effectively build the project
+make	It reads the Makefile to compile the program with the required operations. The process may take some time, depending on your system and the size of the program
+make install	The command installs the binaries in the default/modified paths after the compilation
+10) Search
+grep ‘pattern’ files                           	Search for a given pattern in files
+grep -r pattern dir                             	Search recursively for a pattern in a given directory
+locate file                                           	Find all instances of the file
+11) Login
+ssh user@host                                        	Securely connect to host as user
+ssh -p port_number user@host     	Securely connect to host using a specified port
+ssh host                                               	Securely connect to the system via SSH default port 22
+telnet host 	Connect to host via telnet default port 23
+12) Disk Usage
+df  -h                           	Displays free space on mounted systems
+df  -i                          	Displays free inodes on filesystems
+fdisk  -l                    	Shows disk partitions, sizes, and types
+du -sh                       	Displays disk usage in the current directory in a human-readable format
+findmnt                      	Displays target mount point for all filesystems
+mount device-path mount-point	Mount a device
+13) Directory Traverse
+cd ..             	Move up one level in the directory tree structure
+cd                	Change directory to $HOME directory
+cd /test 	Change directory to /test directory
+14) GREP
+‘grep’ command stands for global regular expression print
+
+grep value filename        	To search a value
+grep -v value filename	To ignore the value
+grep -i  value filename	To search the value  
+Cat filename | grep value	To search the value on file
+15) SED
+Linux ‘sed’ command stands for stream editor.
+
+sed ‘=’ filename                                    	To print line numbers with content
+sed -n ‘5,9p’ filename    	To print 5 to 9 lines
+sed ‘5,9p’ filename	To paste 5 to 9 lines
+echo abc | sed ‘s/abc/def/’         	To replace abc with def  
+sed -e ‘s/abc/def/; s/def/ghi/’ file         	To replace multiple things
+sed ‘3c\changed’ filename	To change the 3rd line
