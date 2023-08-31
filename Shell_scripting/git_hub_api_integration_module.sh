@@ -1,5 +1,8 @@
 YT: https://youtu.be/Qcz6uSXk8iA?si=huqlcKpoGEJobuNB
-GH: #!/bin/bash
+GH: https://github.com/devops-by-examples/Shell/blob/main/github-api-integration-module.sh
+
+
+#!/bin/bash
 ################################
 # Author: Abhishek
 # Version: v1
