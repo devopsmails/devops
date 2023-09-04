@@ -43,3 +43,19 @@ con:
 ====
 SPOF: 
 Single Point of Failure. If Docker engine goes down. All the containers created will go down. 
+
+What is Buildah used for?
+--------------------
+
+
+Buildah is an open-source, Linux-based tool used to build Open Container Initiative (OCI)-compatible images. It is a daemon-less tool, which means that it does not require a running daemon to function. This makes it ideal for use in CI/CD pipelines and other environments where daemons are not always available.
+
+Buildah is similar to Docker, but it has some key differences. Buildah does not require a daemon, and it can be used to build images from scratch or from existing images. Buildah is also more flexible than Docker, and it can be used to build images for a variety of platforms, including Linux, Windows, and macOS.
+
+Buildah can be used to:
+
+Build OCI-compatible images
+Build images from scratch or from existing images
+Build images for a variety of platforms
+Integrate with CI/CD pipelines
+Automate the build process
