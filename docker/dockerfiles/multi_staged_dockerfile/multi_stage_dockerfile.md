@@ -28,10 +28,35 @@ COPY src .
 
 RUN mvn -B package  
 
-#####  Final Stage ########  
+#####Final Stage ########  
 
 FROM openjdk:11-jdk-slim  
 
 COPY --from=build /app/target/my-app.jar /app/my-app.jar  
 
 CMD ["java", "-jar", "/app/my-app.jar"]  
+
+
+
+------------ Python Multistage Docker file Example -----------  
+ 
+#####Base image ######  
+FROM python:3.8-slim AS build  
+
+WORKDIR /app  
+
+COPY requirements.txt .  
+
+RUN pip install -r requirements.txt  
+
+COPY src .  
+
+RUN python setup.py install  
+
+####final stage#####
+
+FROM python:3.8-slim  
+
+COPY --from=build /app/ /app  
+
+CMD ["python", "app.py"]  
