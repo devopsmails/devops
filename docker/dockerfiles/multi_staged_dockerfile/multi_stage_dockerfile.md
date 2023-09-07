@@ -37,8 +37,8 @@ COPY --from=build /app/target/my-app.jar /app/my-app.jar
 CMD ["java", "-jar", "/app/my-app.jar"]  
 
 
-
------------- Python Multistage Docker file Example -----------  
+Python Multistage Docker file Example   
+-----------------------  
  
 #####Base image ######  
 FROM python:3.8-slim AS build  
