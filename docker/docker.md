@@ -71,7 +71,8 @@ Ok, let me make it easy !!!
 
 A container is a bundle of Application, Application libraries required to run your application and the minimum system dependencies.
 
-https://user-images.githubusercontent.com/43399466/217262726-7cabcb5b-074d-45cc-950e-84f7119e7162.png
+![image](https://github.com/devopsmails/devops/assets/119680288/521c9cfc-78c6-47fc-badb-1092ae0bec3e)
+
 
 Containers vs Virtual Machine
 Containers and virtual machines are both technologies used to isolate applications and their dependencies, but they have some key differences:
@@ -89,7 +90,7 @@ Let's try to understand this with an example:
 
 Below is the screenshot of official ubuntu base image which you can use for your container. It's just ~ 22 MB, isn't it very small ? on a contrary if you look at official ubuntu VM image it will be close to ~ 2.3 GB. So the container base image is almost 100 times less than VM image.
 
-https://user-images.githubusercontent.com/43399466/217493284-85411ae0-b283-4475-9729-6b082e35fc7d.png
+![image](https://github.com/devopsmails/devops/assets/119680288/609764aa-bb35-4efe-92bf-6bf3b7928abb)
 
 To provide a better picture of files and folders that containers base images have and files and folders that containers use from host operating system (not 100 percent accurate -> varies from base image to base image). Refer below.
 
@@ -133,7 +134,8 @@ Docker is a containerization platform that provides easy way to containerize you
 In simple words, you can understand as containerization is a concept or technology and Docker Implements Containerization.
 
 Docker Architecture ?
-https://user-images.githubusercontent.com/43399466/217507877-212d3a60-143a-4a1d-ab79-4bb615cb4622.png
+![image](https://github.com/devopsmails/devops/assets/119680288/b5b605a8-c1ca-4e16-842a-c8a04cc6735b)
+
 
 The above picture, clearly indicates that Docker Deamon is brain of Docker. If Docker Deamon is killed, stops working for some reasons, Docker is brain dead :p (sarcasm intended).
 
@@ -146,7 +148,8 @@ docker build -> builds docker images from Dockerfile
 docker run -> runs container from docker images
 docker push -> push the container image to public/private regestries to share the docker images.
 
-https://user-images.githubusercontent.com/43399466/217511949-81f897b2-70ee-41d1-b229-38d0572c54c7.png
+![image](https://github.com/devopsmails/devops/assets/119680288/4660adea-095b-41c0-bfb6-da780fa50cf2)
+
 
 Understanding the terminology (Inspired from Docker Docs)
 Docker daemon
