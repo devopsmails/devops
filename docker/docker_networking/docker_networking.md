@@ -83,3 +83,8 @@ docker run -d --name host-demo-cont --network=host nginx:latest
       - running a container on a ""Host network""
       - network - Host
       - Ip - "" Empty as it is using Host network directly.
+      
+docker ps
+docker network prune 
+      - removes all the networks which are unused.
+      
