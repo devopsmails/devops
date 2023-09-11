@@ -59,4 +59,5 @@ Default output format [None]: Enter any format or just Enter(it gives json forma
 AWS CLI Commnads ref link:  https://docs.aws.amazon.com/cli/latest/  
 
 aws s3 ls  
+aws s3api create-bucket --bucket kops-suresh-storage --region us-west-1  
 
