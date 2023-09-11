@@ -1,0 +1,19 @@
+doc: https://kubernetes.io/docs/concepts/workloads/pods/  
+
+vi pod.yml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+
+kubectl create -f pod.yml
+kubectl get pods -o wide
+minikube ssh
+curl ip ###### displays the application #####
