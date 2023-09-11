@@ -3,39 +3,46 @@ kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
 Pre-requisites:    
 ------------
+Install Docker
+Install Kubectl  
 Install Minikube    
-
-Install Kubectl    
+   
 
 on AWS EC2 ubuntu 20.04: 
 -----------
-Docker installation:  
-------------------
-sudo apt install docker.io     
-sudo usermod -aG docker ubuntu     
-sudo chmod 660 /var/run/docker.sock    
-ls -l /var/run/docker.sock    
-sudo systemctl start docker     
+sudo apt update -y
+sudo apt-get upgrade -y
 
+docker installation:   
+-------------------
+sudo apt install docker.io
+sudo usermod -aG docker ubuntu
+sudo chmod +x /var/run/docker.sock
+ll /var/run/docker.sock
+systemctl status docker
 
-Kubectl installation:  
+docker --version
+
+Kubectl Installation:   
+--------------------  
+
+DOC: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+
+uname -m  ##### to find xarm or arm64 #####
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"  
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl  
+chmod +x kubectl  
+mkdir -p ~/.local/bin  
+mv ./kubectl ~/.local/bin/kubectl  
+kubectl version --client  
+
+Minikube installation:    
 --------------------
-
-curl -LO https://storage.googleapis.com/kubernetes-release/release/latest/bin/linux/amd64/kubectl     
-
-Minikube installation:  
----------------------
-
-curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64    
-
-minikube start     
-
-               ( or )
+Doc: https://minikube.sigs.k8s.io/docs/start/  
 
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64  
 sudo install minikube-linux-amd64 /usr/local/bin/minikube  
-
 minikube start  
-minikube start --force  
 
 
