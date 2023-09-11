@@ -10,8 +10,8 @@ Install Minikube
 
 on AWS EC2 ubuntu 20.04: 
 -----------
-sudo apt update -y
-sudo apt-get upgrade -y
+sudo apt update -y  
+sudo apt-get upgrade -y  
 
 docker installation:   
 -------------------
