@@ -1,18 +1,18 @@
-Minikube: https://minikube.sigs.k8s.io/docs/start/
-kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+Minikube: https://minikube.sigs.k8s.io/docs/start/  
+kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/  
 
-Pre-requisites:  
+Pre-requisites:    
 ------------
-Install Minikube  
+Install Minikube    
 
-Install Kubectl  
+Install Kubectl    
 
 on Linunx ubuntu: 
 -----------
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-sudo install minikube-linux-amd64 /usr/local/bin/minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64  
+sudo install minikube-linux-amd64 /usr/local/bin/minikube  
 
-minikube start
-minikube start --force
+minikube start  
+minikube start --force  
 
 
