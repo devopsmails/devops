@@ -36,7 +36,32 @@ EndpointSlice
 NamespaceController  
 ServiceAccountController  
 
+yaml
+----
+vi deployment.yml  
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment ##Depoyment name
+  labels:
+    app: nginx ## Label defining for the app
+spec:
+  replicas: 3  ## Replics set should always 3 pods running
+  selector:
+    matchLabels:
+      app: nginx  ## if Label matches with defining label for the app
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+---
 Commands:  
 ---------
 kubectl get pods                     # Only pods
