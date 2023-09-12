@@ -63,7 +63,7 @@ spec:
         - containerPort: 80
 ---
 
-<!---
+pre  
 Commands:  
 ---------
 kubectl get pods                     # Only pods
@@ -119,5 +119,5 @@ nginx-deployment-cbdccf466-4jgdk   0/1     ContainerCreating   0          0s
 nginx-deployment-cbdccf466-7kw5h   0/1     Terminating         0          2m20s  
 nginx-deployment-cbdccf466-7kw5h   0/1     Terminating         0          2m21s  
 nginx-deployment-cbdccf466-7kw5h   0/1     Terminating         0          2m21s  
-nginx-deployment-cbdccf466-4jgdk   1/1     Running             0          1s          *** ensure disired state is actual state ***  --->
+nginx-deployment-cbdccf466-4jgdk   1/1     Running             0          1s          *** ensure disired state is actual state ***    pre
 
