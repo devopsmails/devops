@@ -15,5 +15,7 @@ spec:
 
 kubectl create -f pod.yml  
 kubectl get pods -o wide  
-minikube ssh  
+minikube ssh  # - To ssh into minikube  
+(or)   
+ssh -i ubuntu@Master/node ip address  
 curl ip ###### displays the application #####  
