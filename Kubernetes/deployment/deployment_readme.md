@@ -1,5 +1,12 @@
 YT:  https://youtu.be/lVKLkyuRWCY?si=UCQYXZdxXpp5LmiZ
 
+Container vs pod vs deployment:  ?
+--------------------------
+
+depoyment vs replicaset:  ?
+----------------------
+
+
 Why Deployment?
 ------------
 
