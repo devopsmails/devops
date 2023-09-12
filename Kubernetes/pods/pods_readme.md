@@ -13,9 +13,17 @@ spec:
     ports:  
     - containerPort: 80  
 
-kubectl create -f pod.yml  
-kubectl get pods -o wide  
-minikube ssh  # - To ssh into minikube  
-(or)   
-ssh -i ubuntu@Master/node ip address  
-curl ip ###### displays the application #####  
+
+pod commands:    
+--------------
+kubectl create -f pod.yml   
+kubectl get pods -o wide    
+minikube ssh  # - To ssh into minikube   
+(or)    
+ssh -i ubuntu@Master/node ip address   
+curl ip ###### displays the application #####    
+
+Error debug:  
+===========   
+Kubectl describe pods #podname  
+Kubectl logs #podname  
