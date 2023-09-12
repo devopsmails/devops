@@ -5,3 +5,7 @@ Why Deployment?
 
 Auto Scalling  
 Auto Healing  
+
+Deployment Process:  
+--------------
+Deployment >> Replica Set(Controller) >> Disired Pods are running   
