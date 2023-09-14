@@ -1,3 +1,5 @@
+```
+
 docker + K8
 ------
 CMD: kubectl get pods
@@ -16,3 +18,4 @@ mention the same #dusername/appname:v1 in deployment.yml at images
 
 CMD: kubectl apply -f deployment.yml
 kubectl get pods (5 sec will be in running status)
+```
