@@ -33,31 +33,6 @@ Node port:
 Load Balancer:  
   To the whole outer world can be accessed.  
 
-code  
-        This is a preformatted text block.
 
 
-~~~
-
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: example-deployment
-  labels:
-    app: example
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: example
-  template:
-    metadata:
-      labels:
-        app: example
-    spec:
-      containers:
-      - name: example-container
-        image: nginx:latest
-        ports:
-       
 
