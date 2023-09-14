@@ -15,7 +15,7 @@ Services Discovery (Through Labels & Selectors):
   
 Expose to world: 
   Can't be provided  to user to access a new ip address after every auto-Healing. So will be provided with elastic ip of Load Balancer to access from anywhere.  
-'''
+'''  
 Service Types:  
 ------------
 Cluster IP:
