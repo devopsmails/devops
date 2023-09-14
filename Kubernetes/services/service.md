@@ -37,7 +37,7 @@ code
         This is a preformatted text block.
 
 
-YAML:
+~~~
 
 apiVersion: apps/v1
 kind: Deployment
