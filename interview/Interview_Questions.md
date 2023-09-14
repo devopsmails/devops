@@ -1,4 +1,5 @@
-```
+README:
+
 Kubernetes: 
 ---------
 
@@ -113,4 +114,4 @@ Day to Day activities on Kubernetes?
     ex:
     If there is any issue with Pods, Services, or any port is not communicating as expecting should help them resolving as SME.
     
-  - we have 3 master nodes & 10 worker nodes, We do a lot of maintainence activies like : upgrading, adding any required mandatory packages ```
+  - we have 3 master nodes & 10 worker nodes, We do a lot of maintainence activies like : upgrading, adding any required mandatory packages 
