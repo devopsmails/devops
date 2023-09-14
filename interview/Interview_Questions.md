@@ -3,12 +3,14 @@ Kubernetes:
 ---------
 
 what is the diff b/w Docker & Kuberntes?
+----------------
   - Docker is a containerization platform, while Kubernetes is a container orchestration platform.
     Docker is used to build and run containers. A container is a lightweight, isolated environment that contains everything an application needs to run, including its          code, runtime environment, system tools, system libraries, and settings.
 
     Kubernetes is used to manage and orchestrate containers. It can be used to deploy, manage, and scale containerized applications across a cluster of hosts.
 
 What are the Main components of K8's archetecture?
+--------------------
   Control plane: 
   -------------
     The control plane is responsible for managing the Kubernetes cluster. It consists of the following components:
@@ -34,6 +36,7 @@ What are the Main components of K8's archetecture?
   CRE - Docker  
 
 What are the diff b/w Docker swarm & Kubernetes?
+---------------
 
 Feature	              Docker Swarm	                                                    Kubernetes
 
@@ -48,6 +51,7 @@ Ease of    	Easier to use	                                                      
 use
 
 What is diff b/w Docker contianer & K8's Pod?
+-------------------
 
 Feature                      	Docker container	                                                  Kubernetes pod
                 	A lightweight, isolated environment that contains            A group of one or more containers, with shared storage/network resources, and a
@@ -66,6 +70,7 @@ Lifecycle	     Containers are managed by the container runtime, such as 	       
                Docker or containerd.
 
 What is the namespaces in kubernetes?
+-----------------
 
 
 Isolating production and development environments
@@ -73,6 +78,7 @@ Running multiple projects on the same cluster
 Implementing security policies
 
 What is the role of kube-proxy?
+---------------
 
 Service discovery: 
   Kube-proxy maintains a cache of all services in the cluster. This cache is used to route traffic to the correct pods.
@@ -83,6 +89,7 @@ Failover:
 
 
 What are the Diff types of Services in Kubernetes?
+------------------
 
 ClusterIP: A ClusterIP service exposes the pods within the Kubernetes cluster.
 NodePort: A NodePort service exposes the pods on a specific port on each node in the cluster.
@@ -90,10 +97,18 @@ LoadBalancer: A LoadBalancer service exposes the pods using a load balancer prov
 ExternalName: An ExternalName service exposes the pods using an external DNS name.
 
 What are the diff b/w Node port & Load Balencder Services in K8'S?
+-------------------------
 
 What is the role of Kublet?
+----------------------
+Registers the node with the Kubernetes API server.
+Pulls images from the container registry.
+Creates and starts pods.
+Monitors pods.
+Restarts failed pods.
 
 Day to Day activities on Kubernetes?
+---------------------------------
   - as DevOps Engineer we manage the kubernets cluster & make sure that applications deployed k8's cluster & there are no issues with the application & Moniter them.
     ex:
     If there is any issue with Pods, Services, or any port is not communicating as expecting should help them resolving as SME.
