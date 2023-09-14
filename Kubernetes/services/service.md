@@ -21,7 +21,7 @@ Services Discovery (Through Labels & Selectors):
   
 Expose to world: 
   Can't be provided  to user to access a new ip address after every auto-Healing. So will be provided with elastic ip of Load Balancer to access from anywhere.  
-'''  
+
 Service Types:  
 ------------
 Cluster IP:
@@ -35,54 +35,3 @@ Load Balancer:
 
 code  
         This is a preformatted text block.
-
-              All whitespace characters will be preserved.
-
-| Column 1                        | Column 2                       |
-|---------------------------------|--------------------------------|
-| This is a cell with two spaces between the words.        | #
-
-
-
-
-# Readme
-
-        This is a preformatted text block.
-
-              All whitespace characters will be preserved.
-
-| Column 1                        | Column 2                       |
-|---------------------------------|--------------------------------|
-| This is a cell with two spaces between the words.        |
-
-
-```python
-def my_function(arg1, arg2):
-    """This is a Python example code."""
-    # This is a comment.
-    print(arg1 + **arg2**)
-
-if __name__ == '__main__':
-    my_function(1, 2) ```
--------------------
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-  labels:
-    app: nginx
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
