@@ -6,7 +6,8 @@ CMD: kubectl get pods
 error: 
 Status: ImagePullBackOff
 
-<img width="569" alt="image" src="https://github.com/devopsmails/devops/assets/119680288/c8b7bbbe-bfaa-48b2-9b3d-424313b4a6b4">
+![image](https://github.com/devopsmails/devops/assets/119680288/b01424b4-756d-4bdf-8718-d13157fe9876)
+
 
 Solution:
 ---------
