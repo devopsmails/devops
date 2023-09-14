@@ -30,7 +30,7 @@ Cluster IP:
 Node port:  
   Allows access only who has the Node (server/Instance) access - Inside Organization
 
-Load Balancer:  
+Load Balancer(With Cloud Provider Only possible):  
   To the whole outer world can be accessed.  
 
 
