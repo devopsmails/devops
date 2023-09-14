@@ -9,7 +9,7 @@ what is the diff b/w Docker & Kuberntes?
 
     Kubernetes is used to manage and orchestrate containers. It can be used to deploy, manage, and scale containerized applications across a cluster of hosts.
 
-What are the Main components of K8's archetecture?
+What are the Main components of K8's archetecture?  
 --------------------
   Control plane: 
   -------------
