@@ -50,10 +50,11 @@ code
 | This is a cell with two spaces between the words.        |
 
 
-'''
+```python
+def my_function(arg1, arg2):
+    """This is a Python example code."""
+    # This is a comment.
+    print(arg1 + **arg2**)
 
-num = int(input("Enter a number: "))
-if (num % 2) == 0:
-   print("{0} is Even".format(num))
-else:
-   print("{0} is Odd".format(num))
+if __name__ == '__main__':
+    my_function(1, 2)
