@@ -4,7 +4,7 @@ Kubernetes:
 
 what is the diff b/w Docker & Kuberntes?
   - Docker is a containerization platform, while Kubernetes is a container orchestration platform.
-    Docker is used to build and run containers. A container is a lightweight, isolated environment that contains everything an application needs to run, including its code,        runtime environment, system tools, system libraries, and settings.
+    Docker is used to build and run containers. A container is a lightweight, isolated environment that contains everything an application needs to run, including its          code, runtime environment, system tools, system libraries, and settings.
 
     Kubernetes is used to manage and orchestrate containers. It can be used to deploy, manage, and scale containerized applications across a cluster of hosts.
 
@@ -66,6 +66,20 @@ Lifecycle	     Containers are managed by the container runtime, such as 	       
                Docker or containerd.
 
 What is the namespaces in kubernetes?
+
+
+Isolating production and development environments
+Running multiple projects on the same cluster
+Implementing security policies
+
+What is the role of kube-proxy?
+
+Service discovery: 
+  Kube-proxy maintains a cache of all services in the cluster. This cache is used to route traffic to the correct pods.
+Load balancing:
+  Kube-proxy distributes traffic across multiple pods for a service. This helps to improve performance and reliability.
+Failover: 
+  Kube-proxy detects and responds to pod failures. If a pod fails, kube-proxy will route traffic to another pod for the service.
 
 
 What are the Diff types of Services in Kubernetes?
