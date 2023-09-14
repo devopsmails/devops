@@ -2,28 +2,45 @@
 YT: https://youtu.be/xY6Ic7Igzck?si=MyOh4yZNJPqZIBF4
 
 Kubernets Services: 
+
+public class Main {
+
+  public static void main(String[] args) {
+
+    // year to be checked
+    int year = 1900;
+    boolean leap = false;
+
+    // if the year is divided by 4
+    if (year % 4 == 0) {
+
+      // if the year is century
+      if (year % 100 == 0) {
+
+        // if year is divided by 400
+        // then it is a leap year
+        if (year % 400 == 0)
+          leap = true;
+        else
+          leap = false;
+      }
+      
+      // if the year is not century
+      else
+        leap = true;
+    }
+    
+    else
+      leap = false;
+
+    if (leap)
+      System.out.println(year + " is a leap year.");
+    else
+      System.out.println(year + " is not a leap year.");
+  }
+}
 ~~~
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: nginx-deployment
-  labels:
-    app: nginx
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - name: nginx
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
+
 ~~~
  
 Why Services: 
