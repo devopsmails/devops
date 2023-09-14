@@ -50,7 +50,7 @@ code
 | This is a cell with two spaces between the words.        |
 
 
-#
+code
 
 num = int(input("Enter a number: "))
 if (num % 2) == 0:
