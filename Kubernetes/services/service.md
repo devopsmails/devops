@@ -1,6 +1,7 @@
+TEXT:
 
 YT: https://youtu.be/xY6Ic7Igzck?si=MyOh4yZNJPqZIBF4
-TEXT:
+
 Kubernets Services: 
 -----------------
 A Kubernetes service in layman's terms is a way to expose a group of pods to other pods and services in the cluster, or to external clients outside the cluster.
