@@ -1,6 +1,6 @@
 <PRE>
 Kubernetes: 
----------
+--------- 
 
 what is the diff b/w Docker & Kuberntes?
 ----------------
