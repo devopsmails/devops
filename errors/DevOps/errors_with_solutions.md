@@ -1,10 +1,10 @@
 
-
-docker + K8
+ 
+docker + K8  
 ------
-CMD: kubectl get pods
-error: 
-Status: ImagePullBackOff
+CMD: kubectl get pods  
+error:   
+Status: ImagePullBackOff  
 
 ![image](https://github.com/devopsmails/devops/assets/119680288/b01424b4-756d-4bdf-8718-d13157fe9876)
 
