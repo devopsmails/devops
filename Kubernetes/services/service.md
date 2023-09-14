@@ -28,3 +28,12 @@ Load Balancer:
   To the whole outer world can be accessed.  
 
 '''
+# Readme
+
+This is a preformatted text block.
+
+All whitespace characters will be preserved.
+
+| Column 1                        | Column 2                       |
+|---------------------------------|--------------------------------|
+| This is a cell with two spaces between the words.        |
