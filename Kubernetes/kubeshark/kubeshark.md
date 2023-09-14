@@ -11,5 +11,5 @@ doc:  https://docs.kubeshark.co/en/install#cli
 
 sh <(curl -Ls https://kubeshark.co/install)  
 
-kubeshark clean
-kubeshark tap
+kubeshark clean  
+kubeshark tap  
