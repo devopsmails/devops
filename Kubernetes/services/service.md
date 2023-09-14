@@ -2,6 +2,7 @@
 YT: https://youtu.be/xY6Ic7Igzck?si=MyOh4yZNJPqZIBF4
 
 Kubernets Services: 
+~~~
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,7 +24,7 @@ spec:
         image: nginx:1.14.2
         ports:
         - containerPort: 80
-
+~~~
  
 Why Services: 
 ------------
