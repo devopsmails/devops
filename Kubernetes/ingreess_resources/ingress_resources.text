@@ -118,10 +118,7 @@ spec:
             name: service1
             port:
               number: 80
-     
-
-
-
+==================================
 kubectl apply -f ingress.yml 
 kubectl get ing
 kubectl get svc
