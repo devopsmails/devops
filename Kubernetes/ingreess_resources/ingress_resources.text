@@ -1,5 +1,6 @@
 YT: https://youtu.be/3YTU4EPjEh4?si=Ghdzrbwi-TaFm5ku  
 
+
 Why ingress is needed when Load Balancder service types exposes to outer world?
 ---------------------------------------------
 
@@ -27,3 +28,9 @@ You are running a Kubernetes cluster on a cloud provider that does not support t
 You are running a Kubernetes cluster on a cloud provider that charges for load balancers.
 You need to expose multiple services to the public internet, but you don't need a high-availability solution for all of them.
 You need to route traffic to your services based on complex rules, such as the host name, path, and HTTP method.
+
+
+Ingress routing types:
+========================
+Host based routing
+path Based routing
