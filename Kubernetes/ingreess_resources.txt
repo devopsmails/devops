@@ -1,0 +1,28 @@
+YT: https://youtu.be/3YTU4EPjEh4?si=Ghdzrbwi-TaFm5ku  
+
+Why ingress is needed when Load Balancder service types exposes to outer world?
+---------------------------------------------
+
+Load balancer service type
+
+The LoadBalancer service type creates a load balancer that distributes traffic across all of the instances of your service. This is a good option if you need to expose your service to the public internet and you need a high-availability solution.
+
+However, the LoadBalancer service type is not available on all Kubernetes providers. Additionally, it can be expensive to create and maintain load balancers.
+
+Ingress
+
+Ingress works by routing traffic from outside the cluster to services within the cluster. It provides a unified way to manage and route traffic to your applications, without having to manage services and load balancers manually.
+
+Ingress is a good option if you need to expose your services to the public internet, but you don't need a high-availability solution. Additionally, Ingress is available on all Kubernetes providers.
+
+Reasons to use Ingress instead of the LoadBalancer service type
+
+Ingress is available on all Kubernetes providers, while the LoadBalancer service type is not.
+Ingress is often cheaper to use than the LoadBalancer service type.
+Ingress provides a unified way to manage and route traffic to your applications, without having to manage services and load balancers manually.
+Here are some specific examples of when you might want to use Ingress instead of the LoadBalancer service type:
+
+You are running a Kubernetes cluster on a cloud provider that does not support the LoadBalancer service type.
+You are running a Kubernetes cluster on a cloud provider that charges for load balancers.
+You need to expose multiple services to the public internet, but you don't need a high-availability solution for all of them.
+You need to route traffic to your services based on complex rules, such as the host name, path, and HTTP method.
