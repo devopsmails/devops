@@ -1,5 +1,5 @@
 YT: https://youtu.be/3YTU4EPjEh4?si=Ghdzrbwi-TaFm5ku  
-README
+#
 Why ingress is needed when Load Balancder service types exposes to outer world?
 ---------------------------------------------
 
