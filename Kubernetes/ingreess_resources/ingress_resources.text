@@ -1,5 +1,8 @@
 YT: https://youtu.be/3YTU4EPjEh4?si=Ghdzrbwi-TaFm5ku  
 
+Note: 
+====
+Default ingress will not installed in k8 cluster.
  
 Enterprise level Load balencers:
 =============================
@@ -21,6 +24,18 @@ K8 created concept called ""ingress"". But there are number of enterprise loadba
 called """ingress controller""" which need to be configured in k8. 
 
 ingress controller can be set up using HELM charts or YAML manifests.
+
+User creates deploys ingress controller & Ingress resources. 
+
+----------------------------
+Installtion of ingress on minikube:
+==================================
+Doc: https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
+
+cmd:
+----
+minikube addons enable ingress         - ingress is enabled/installed
+kubectl get pods -n ingress-nginx      - shows out if it's installed properly
 
 
 Why ingress is needed when Load Balancder service types exposes to outer world?
@@ -64,3 +79,54 @@ Ingress routing types:
 ========================
 Host based routing
 path Based routing
+
+
+Commnds:
+=========
+minikube start              #if instance was restated.
+kubectl get pods
+kubectl get svc
+ls
+cd Docker-Zero-to-Hero/examples/python-web-app/
+ll
+vi python-service.yml 
+kubect apply -f python-service.yml 
+kubectl get svc
+minikube ip
+curl -L http://#minikube ip192.168.49.2:30007/demo -v
+
+minikube addons enable ingress
+kubectl get pods -n ingress-nginx
+
+kubectl get ing
+kubectl get svc
+vi ingress.yml
+=============
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: python-ingress
+spec:
+  rules:
+  - host: "sevabharath.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/free"
+        backend:
+          service:
+            name: service1
+            port:
+              number: 80
+     
+
+
+
+kubectl apply -f ingress.yml 
+kubectl get ing
+kubectl get svc
+kubectl get pods -A
+kubectl logs ingress-nginx-controller-7799c6795f-whxv9 -n ingress-nginx        ## Check the log of pod # in namespace ingress-nginx
+kubectl get ing
+sudo vi /etc/hosts - hostip & sevabharath.com
+ping sevabharath.com      it works for packets sending & receiving
