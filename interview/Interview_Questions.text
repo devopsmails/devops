@@ -5,7 +5,8 @@ Kubernetes:
 what is the diff b/w Docker & Kuberntes?
 ----------------
   - Docker is a containerization platform, while Kubernetes is a container orchestration platform.
-    Docker is used to build and run containers. A container is a lightweight, isolated environment that contains everything an application needs to run, including its          code, runtime environment, system tools, system libraries, and settings.
+    Docker is used to build and run containers. A container is a lightweight, isolated environment that contains everything an application needs to run, including its          
+    code, runtime environment, system tools, system libraries, and settings.
 
     Kubernetes is used to manage and orchestrate containers. It can be used to deploy, manage, and scale containerized applications across a cluster of hosts.
  
@@ -43,7 +44,8 @@ Feature	              Docker Swarm	                                             
 Type	      Container orchestration platform	                                  Container orchestration platform
 Purpose	    Managing and deploying containerized applications	                  Managing and deploying containerized applications
 Scope	      Single host or cluster of hosts	                                    Cluster of hosts
-Features	  Container scheduling, service discovery, load balancing,            Container scheduling, service discovery, load balancing, self-healing, and more advanced                  self-healing                                                       features such as rollouts, rollbacks, and canary deployments
+Features	  Container scheduling, service discovery, load balancing,            Container scheduling, service discovery, load balancing, self-healing, and more advanced
+           self-healing                                                       features such as rollouts, rollbacks, and canary deployments
 Community	  Smaller community	                                                  Larger community
 Ecosystem	  Smaller ecosystem	                                                  Larger ecosystem
 
@@ -114,3 +116,10 @@ Day to Day activities on Kubernetes?
     If there is any issue with Pods, Services, or any port is not communicating as expecting should help them resolving as SME.
     
   - we have 3 master nodes & 10 worker nodes, We do a lot of maintainence activies like : upgrading, adding any required mandatory packages 
+
+Is Load Balencing Service Restrricted to only Cloud Providers?
+----------------------------------------------------------
+No. Baremetal LB implementations is available at https://github.com/metallb/metallb
+
+
+
