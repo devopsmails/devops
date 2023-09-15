@@ -51,15 +51,17 @@ spec:
 kubectl apply -f python-service.yml 
 kubectl get svc -v=9
 kubectl get svc
+
 cluster ip:  
 --------
 ssh minikube ##### we can access through cluster ip #####
 curl -L http://#Nodeportip10.98.80.20:80/demo  
+
 Nodeport:
 ----------
 minikube ip #ip of laptop which is accessing to the nodes
 kubectl get svc
-curl -L http://#pcip192.168.49.2:map30007/demo 
+curl -L http://#minikubeip192.168.49.2:map30007/demo 
 
 Check on the broswer with http://#pcip192.168.49.2:map30007/demo 
 
