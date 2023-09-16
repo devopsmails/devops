@@ -61,4 +61,4 @@ kubectl create deployment nginx-deployment --image=nginx
 
 On console >> Administrtor >> workload  >> pods: list the pods in running in that name of that login  
 
-oc loogout  
+oc loogout   
