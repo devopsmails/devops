@@ -5,7 +5,7 @@ RBAC = Role Based Access Control
 =====================
 1. USER ACCESS & SERVICE ACCOUNTS:
 
-   USER:
+   USER: 
   (ex: what level access should have for dev & QA team)
    
   SERVICE ACCOUNTS: 
