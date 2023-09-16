@@ -56,9 +56,9 @@ sudo mv oc /usr/local/bin
 # Verify the installation
 oc version
 
-oc login # openshift console >> profile >> copy login id command >> display token >> copy paste here
-kubectl create deployment nginx-deployment --image=nginx
+oc login # openshift console >> profile >> copy login id command >> display token >> copy paste here  
+kubectl create deployment nginx-deployment --image=nginx  
 
-On console >> Administrtor >> workload  >> pods: list the pods in running in that name of that login
+On console >> Administrtor >> workload  >> pods: list the pods in running in that name of that login  
 
-oc loogout
+oc loogout  
