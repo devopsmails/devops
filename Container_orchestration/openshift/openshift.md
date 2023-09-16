@@ -1,5 +1,5 @@
 
-What is Open shift?
+What is Open shift? 
 =======================
 OpenShift is a container orchestration platform that builds on top of Kubernetes to provide additional features and functionality. 
   It is a commercial product from Red Hat, but there is also an open source version called """OpenShift Origin""".
