@@ -41,7 +41,7 @@ Enhanced security:
   
 openshift (OC) CLI Installation on AWS EC2 UBUNTU:
 ==================================================
-
+```
 ssh -i your-key.pem ubuntu@ec2-instance-ip
 
 # Download the oc binary (replace version with the desired version)
@@ -62,3 +62,4 @@ kubectl create deployment nginx-deployment --image=nginx
 On console >> Administrtor >> workload  >> pods: list the pods in running in that name of that login  
 
 oc loogout   
+```
