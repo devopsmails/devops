@@ -19,3 +19,10 @@ You can also create a Secret from a file or directory of files.
 For example, the following command creates a Secret called """my-secret""" from the contents of the directory """/path/to/secret/files:"""  
 
 kubectl create secret generic my-secret --from-file=/path/to/secret/files  
+
+------------------------
+
+How it protects the sensitive info:
+---------------------------------
+ => By using Strong RBAC(with least Privilliages)
+ => secrets saves the data in encryption format. 
