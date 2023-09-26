@@ -1,7 +1,7 @@
 Why & What is Prometheus?  
 ------------------------
 
-Prometheus is an open-source systems monitoring and alerting toolkit    
+Prometheus is an open-source systems monitoring and alerting toolkit     
 Prometheus is designed to be reliable, scalable, and easy to use.    
 Prometheus collects metrics from monitored targets by scraping HTTP endpoints.   
 It stores the collected metrics in a time series database, where they can be queried using PromQL, a powerful query language.   
