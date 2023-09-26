@@ -25,3 +25,7 @@ AWS API -boto3-doc
 
 EX: ec2 boto3 doc
 https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.html
+
+--------------
+Helm installation docs:
+  https://helm.sh/docs/intro/install/
