@@ -12,8 +12,9 @@ It is also used to monitor infrastructure components such as servers, routers, a
 
 
 
-minikube status
-minikube start
+minikube status  
+minikube start  
+kubectl get pods -A  
 
 Install prometheus using Helm:  
 -----------------------------
