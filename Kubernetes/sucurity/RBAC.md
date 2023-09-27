@@ -6,7 +6,7 @@ RBAC = Role Based Access Control
 1. USER ACCESS & SERVICE ACCOUNTS:
 
    USER: 
-  (ex: what level access should have for dev & QA team)
+  (ex: what level access should have for dev & QA team)  
    
   SERVICE ACCOUNTS: 
    EX: If a pod is created & connected with a Service. That service should have restrictions to access or delete or create to any secret files.   
