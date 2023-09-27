@@ -19,7 +19,7 @@ kubectl get ns                                      #list all the namespaces
 kubectl get serviceaccount ns rbac-test             #lists all the service accounts created in ns rbac-test
 
 ****** to Check the permission of service account******
-kubectl auth can-i --as system:serviceacccont:rbac-test:pod-service-account get pod -n rbac-test          #op: No=not permitted, yes= it has permission
+kubectl auth can-i --as system:serviceacccont:rbac-test:pod-service-account get pods -n rbac-test          #op: No=not permitted, yes= it has permission
 
 ```
 
@@ -63,7 +63,7 @@ roleRef:
   apiGroup: ""
 ----------------------------
  kubectl apply -f rolebinding.yml
-kubectl auth can-i --as system:serviceaccount:rbac-test:pod-service-account get pods -n rbac-test     #op: Yes, as service account & role is properly binded
+kubectl auth can-i --as system:serviceaccount:rbac-test:pod-service-account get <pods>/<svc>/<deploy>.. -n rbac-test     #op: Yes for all the resournces, as service account                                                                                                                            & role is properly binded
 
 ```
 
