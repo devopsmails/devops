@@ -63,7 +63,9 @@ roleRef:
   apiGroup: ""
 ----------------------------
  kubectl apply -f rolebinding.yml
-kubectl auth can-i --as system:serviceaccount:rbac-test:pod-service-account get <pods>/<svc>/<deploy>.. -n rbac-test     #op: Yes for all the resournces, as service account                                                                                                                            & role is properly binded
+kubectl auth can-i --as system:serviceaccount:rbac-test:pod-service-account get <pods>/<svc>/<deploy>.. -n rbac-test
+
+#op: Yes for all the resournces, as service account & role is properly binded
 
 ```
 
