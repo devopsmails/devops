@@ -69,3 +69,32 @@ kubectl auth can-i --as system:serviceaccount:rbac-test:pod-service-account get 
 
 ```
 
+Cluster role Binding:  
+=================
+docs: 
+```
+kubectl auth can-i --as system:serviceaccount:rbac-test:pod-service-account get deploy -n kube-system
+```
+#op: will be """no""" as it's not bindinded with cluster role which means the namespace kube-system is a cluster namespace which is not attached in role binding.
+```
+vi cluster-role-binding.yml
+------------------------
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: test-admin-cluster-binding
+subjects:
+- kind: ServiceAccount  # binding service account with rolebinding 
+  name: pod-service-account
+  apiGroup: ""
+  namespace: rbac-test
+roleRef:
+  kind: ClusterRole          # binding  role with rolebinding 
+  name: cluster-admin        #***** default admin name for k8 cluster not created ****
+  apiGroup: ""
+-----------------
+kubectl apply -f cluster-role-binding.yml
+kubectl auth can-i --as system:serviceaccount:rbac-test:pod-service-account get deploy -n kube-system
+kubectl auth can-i --as system:serviceaccount:rbac-test:pod-service-account delete pods  -n rbac-test
+```
+op: Yes, service account is binded with cluster role. 
