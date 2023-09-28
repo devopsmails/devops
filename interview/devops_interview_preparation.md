@@ -57,3 +57,21 @@ Use git rebase when:
 -----------------
 You want to have a clean and linear history.  
 You are working on a personal project and you don't need to share your changes with anyone else.  
+
+6. Git reset vs revert vs cherrypick:
+--------------------------------
+Use git reset when:  
+-----------------
+You want to undo all of the changes that have been made since a previous commit.  
+You have made a mistake and you want to go back to a previous state of your repository.  
+
+Use git revert when:  
+-----------------------
+You want to undo the changes made in a previous commit, but you don't want to change the history of your repository.  
+You want to create a new commit that undoes the changes made in a previous commit.   
+
+Use git cherry-pick when: 
+---------------------
+You want to redo changes that have been undone.  
+You want to apply changes from one branch to another branch.  
+It is important to note that git reset is a dangerous command if you have already shared your changes with others. This is because git   reset can rewrite the history of your commits, which can make it difficult for others to merge your changes into their own branches.  
