@@ -35,14 +35,18 @@ spec:
 
 pod commands:    
 --------------
+```
+kubectl run nginx --image=nginx --namespace=my-namespace
 kubectl create -f pod.yml   
 kubectl get pods -o wide    
 minikube ssh  # - To ssh into minikube   
 (or)    
 ssh -i ubuntu@Master/node ip address   
 curl ip ###### displays the application #####    
-
+```
 Error debug:  
 ===========   
+```
 Kubectl describe pods #podname  
 Kubectl logs #podname  
+```
