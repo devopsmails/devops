@@ -20,4 +20,25 @@ Automate and optimize existing DevOps processes
 ```
 GIT & GITHUB 
 --------------
-3.
+3. CURL VS WGET?
+4. git clone vs pull vs fetch vs fork?
+   ===================================
+Use git clone to:  
+--------------
+Create a local copy of a remote repository for the first time.  
+Create a local copy of a remote repository that you want to work on independently.  
+
+Use git pull to:
+--------------
+Update your local repository with the latest changes from the remote repository.  
+Merge changes from the remote repository into your current branch.  
+
+Use git fetch to:  
+------------------
+Get the latest changes from the remote repository without merging them into your current branch.  
+See what changes have been made to the remote repository since your last pull.  
+
+Use git fork to: 
+----------------
+Create a copy of a remote repository on your own GitHub account.  
+Make changes to a project without affecting the original repository.  
