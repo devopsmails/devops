@@ -1,4 +1,4 @@
-Role: DevOps Build & Release Engineer  
+Role: DevOps Build & Release Engineer   
 --------------------------------
 1. What is DevOps life Cycle?
    ========================
