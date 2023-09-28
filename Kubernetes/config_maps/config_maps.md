@@ -3,8 +3,9 @@ What is the config maps?
 
 Configs Maps helps to save non-sensitive info: DB port, DB Username  
 
-ConfigMaps in Kubernetes are a way to store and manage non-sensitive configuration data. They are stored as key-value pairs, and can be used to configure Pods, Deployments,   
-and other Kubernetes objects. ConfigMaps are useful for decoupling configuration data from container images, which makes applications more portable and easier to manage.  
+ConfigMaps in Kubernetes are a way to store and manage non-sensitive configuration data.     
+They are stored as key-value pairs, and can be used to configure Pods, Deployments, and other Kubernetes objects.     
+ConfigMaps are useful for decoupling configuration data from container images, which makes applications more portable and easier to manage.    
 
 Creating a ConfigMap:  
 ====================
