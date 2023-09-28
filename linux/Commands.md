@@ -121,7 +121,7 @@ usermod	Used for changing / modifying user information
 5) File Commands
 ls -al	Lists files – both regular &  hidden files and their permissions as well.
 pwd	Displays the current directory file path
-mkdir ‘directory_name’	Creates a new directory
+mkdir ‘directory_name’	Creates a new directory 
 rm file_name	Removes a file
 rm -f filename	Forcefully removes a file
 rm -r directory_name	Removes a directory recursively
