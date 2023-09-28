@@ -42,3 +42,18 @@ Use git fork to:
 ----------------
 Create a copy of a remote repository on your own GitHub account.  
 Make changes to a project without affecting the original repository.  
+
+5. Git merge vs rebase?
+--------------
+| git merge | Creates a new commit that merges the changes from the two branches. |  
+| git rebase | Replays the commits from one branch on top of another branch. |  
+
+Use git merge when:  
+-----------------
+You want to preserve the history of the two branches.  
+You are working on a team and you need to integrate your changes with the changes of other team members.  
+
+Use git rebase when:  
+-----------------
+You want to have a clean and linear history.  
+You are working on a personal project and you don't need to share your changes with anyone else.  
