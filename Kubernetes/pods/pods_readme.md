@@ -3,9 +3,10 @@ doc: https://kubernetes.io/docs/concepts/workloads/pods/
 
 What is Pod?  
 --------------  
-A pod in Kubernetes is a collection of one or more containers and some shared resources for those containers. It is the smallest  
- deployable unit in Kubernetes. Pods are scheduled by Kubernetes to run on worker machines, and they are managed by Kubernetes to  
- ensure that they are always running.    
+A pod in Kubernetes is a collection of one or more containers and some shared resources for those containers.   
+It is the smallest  deployable unit in Kubernetes. 
+Pods are scheduled by Kubernetes to run on worker machines, and they are managed by Kubernetes to ensure that they are always running.  
+    
  
  Key benefits of using pods in Kubernetes:  
  --------------------------------
