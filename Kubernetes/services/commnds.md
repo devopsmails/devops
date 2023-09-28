@@ -71,3 +71,36 @@ kubectl edit svc python-service
 /nodeport -searching in vi editor
 kubectl get svc # svc will pending if its running on minikube # else it creates elastic ip address.
 <img width="534" alt="image" src="https://github.com/devopsmails/devops/assets/119680288/9caf44b9-fbc4-43eb-a657-5079d2962975">  
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-container
+        image: nginx:latest
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: my-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+```
