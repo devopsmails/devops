@@ -47,9 +47,9 @@ kubectl apply -f resource_quota.yml -n dev_ns
 
 kubectl get quota -n dev_ns               
         #shows the used & unused % of quota in ns dev_ns
-
+```
 ####all types quota in one single yml call can call them while creating priorityClassName: high/medium/low  #####
-
+```
 quota.yml
 -------
 apiVersion: v1
