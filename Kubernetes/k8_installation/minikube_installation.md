@@ -17,7 +17,7 @@ docker installation:
 -------------------
 sudo apt install docker.io  -y  
 
-sudo usermod -aG docker ubuntu  
+sudo usermod -aG docker ubuntu && newgrp docker 
 sudo chmod +x /var/run/docker.sock  
 ll /var/run/docker.sock  
 systemctl status docker  
