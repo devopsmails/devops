@@ -16,6 +16,7 @@ sudo apt-get upgrade -y
 docker installation:   
 -------------------
 sudo apt install docker.io  -y  
+
 sudo usermod -aG docker ubuntu  
 sudo chmod +x /var/run/docker.sock  
 ll /var/run/docker.sock  
