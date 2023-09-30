@@ -1,5 +1,5 @@
-GH: https://github.com/iam-veeramalla/Kubernetes-Zero-to-Hero  
-YT: https://youtu.be/44Qk55E6CAA?si=xHZvnsRTn8v9YxtQ  
+GH: https://github.com/iam-veeramalla/Kubernetes-Zero-to-Hero    
+YT: https://youtu.be/44Qk55E6CAA?si=xHZvnsRTn8v9YxtQ    
 
 
 Creating this repo with an intent to make Kubernetes easy for begineers. This is a work-in-progress repo.  
