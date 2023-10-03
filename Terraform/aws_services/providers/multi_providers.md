@@ -14,3 +14,20 @@ provider "azurerm" {
   alias = "azure"
 }
 ```
+Resourece creation in Multi Providers?  
+-----------------------
+```
+resource "aws_instance" "example" {
+  provider = "aws.aws"
+  ami = "ami-01234567890abcdef0"
+  instance_type = "t2.micro"
+}
+
+resource "azurerm_virtual_machine" "example2" {
+  provider = "azurerm.azure"
+  location = "eastus2"
+  resource_group_name = "my-resource-group"
+  name = "my-vm"
+  vm_size = "Standard_A1"
+}
+```
