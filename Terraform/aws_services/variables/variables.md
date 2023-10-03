@@ -13,10 +13,10 @@ variable "instance_type" {
   default = "t2.micro"
 }
 ```
-```variable``` is used to declare an input variable named example_var.
-description provides a human-readable description of the variable.
-type specifies the data type of the variable (e.g., string, number, list, map, etc.).
-default provides a default value for the variable, which is optional.
+```variable``` is used to declare an input variable named ```instance_type```.
+```description``` provides a human-readable description of the variable.
+```type ``` specifies the data type of the variable (e.g., string, number, list, map, etc.).
+```default``` provides a default value for the variable, which is optional.
 
 Attaching Variables in resources:
 ------------------------------
