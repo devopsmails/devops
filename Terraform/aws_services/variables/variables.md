@@ -13,10 +13,18 @@ variable "instance_type" {
   default = "t2.micro"
 }
 ```
-```variable``` is used to declare an input variable named ```instance_type```.
-```description``` provides a human-readable description of the variable.
-```type ``` specifies the data type of the variable (e.g., string, number, list, map, etc.).
-```default``` provides a default value for the variable, which is optional.
+```variable``` is used to declare an input variable named ```instance_type```.  
+```description``` provides a human-readable description of the variable.  
+```type ``` specifies the data type of the variable:
+  string: A sequence of Unicode characters.  
+number: A numeric value.   
+bool: A boolean value, either true or false.  
+list: A sequence of values.  
+map: A collection of key-value pairs.  
+set: A collection of unique values.  
+object: A collection of named attributes.  
+tuple: A collection of values with a specific order.  
+```default``` provides a default value for the variable, which is optional.  
 
 Attaching Variables in resources:
 ------------------------------
@@ -26,3 +34,10 @@ resource "aws_instance" "example" {
   instance_type = var.instance_type   #### Attaching variable here ####
 }
 ```
+
+Variable Types:
+============== 
+1. Input Variables  
+2. Output Variables
+
+
