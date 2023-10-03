@@ -16,7 +16,7 @@ variable "instance_type" {
 ```variable``` is used to declare an input variable named ```instance_type```.  
 ```description``` provides a human-readable description of the variable.  
 ```type ``` specifies the data type of the variable:
-  string: A sequence of Unicode characters.  
+  > string: A sequence of Unicode characters.  
 number: A numeric value.   
 bool: A boolean value, either true or false.  
 list: A sequence of values.  
