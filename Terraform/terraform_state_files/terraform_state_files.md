@@ -27,7 +27,8 @@ Drawbacks of statefiles in Terraform:
 
 Single point of failure:   
 ------------------
-    Terraform state files are a single point of failure. If the state file is lost or corrupted, Terraform will not be able to manage the infrastructure.  
+    Terraform state files are a single point of failure.   
+    If the state file is lost or corrupted, Terraform will not be able to manage the infrastructure.    
 Complexity: 
 ------------
     Terraform state files can become complex, especially for large and complex projects. 
@@ -47,8 +48,8 @@ Store state files in a remote backend:
     
 Use Terraform Cloud or Terraform Enterprise:   
 ------------------------------------
-    Terraform Cloud and Terraform Enterprise are hosted services that provide a number of features for managing Terraform state, including version control,     
-    encryption, and collaboration.    
+    Terraform Cloud and Terraform Enterprise are hosted services that provide a number of features for
+    managing Terraform state, including version control, encryption, and collaboration.    
 Use a Terraform state management tool:     
 -----------------------------  
     There are a number of third-party tools that can help you manage Terraform state.   
