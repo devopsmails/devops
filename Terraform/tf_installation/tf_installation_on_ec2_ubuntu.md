@@ -12,17 +12,23 @@ TF Commands:
 -------------
 ```
   terraform init :
-    Initializes the Terraform working directory. (Necessary before running any other Terraform commands) :
+    Initializes the Terraform working directory. (Necessary before running any other Terraform commands)
+
   terraform plan :
-    Generates a plan of the changes that Terraform will make to the infrastructure. (Useful for previewing changes before applying them) :
+    Generates a plan of the changes that Terraform will make to the infrastructure. (Useful for previewing changes before applying them)
+
   terraform apply :
-    Creates or updates the infrastructure to match the Terraform configuration. (This is the command that actually makes the changes) :
+    Creates or updates the infrastructure to match the Terraform configuration. (This is the command that actually makes the changes)
+
   terraform import :
-    Adds an existing resource to the Terraform state. (Useful for migrating existing infrastructure to Terraform) :
+    Adds an existing resource to the Terraform state. (Useful for migrating existing infrastructure to Terraform)
+
   terraform destroy :
-    Destroys the infrastructure managed by Terraform. (This should be used with caution) :
+    Destroys the infrastructure managed by Terraform. (This should be used with caution)
+
   terraform show :
     Show the statefile present
+
   terraform state rm :
-    Removes a resource from the Terraform state. (Useful for cleaning up unused resources) :
+    Removes a resource from the Terraform state. (Useful for cleaning up unused resources) 
 ```
