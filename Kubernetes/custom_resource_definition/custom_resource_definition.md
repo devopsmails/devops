@@ -1,5 +1,5 @@
 What & Why Custom_resoure_definition used?
-
+---------------------
   => It extends the capabilities of Kubernetes
   => We can customize any feature which is not available using kubernetes. 
   EX: Istios
