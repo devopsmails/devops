@@ -4,7 +4,7 @@ Consist a set of commands to perform a task.
 It's an interface betwwen user and OS kernal.
 All the executes sequentially.
 Some tasks like file manipulations, Program Executions, User interactions, Automation Tasks can be done. 
-===================================
+===================================  
 
 Advantages of shell Script?
 
