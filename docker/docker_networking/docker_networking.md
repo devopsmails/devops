@@ -22,21 +22,24 @@ Example: docker network create my-network
 Host networks:  
 --------------
     Allow containers to share the host's network stack.  
-    This means that containers connected to a host network can communicate with each other and with the host machine as if they were all running on the same physical machine.
+    This means that containers connected to a host network can communicate with each other and with the host machine   
+    as if they were all running on the same physical machine.
 
 Example: docker network create --driver host my-network    
 
 Overlay networks:   
 ---------------
     More complex than bridge networks, but they offer more flexibility.   
-    Overlay networks can span multiple Docker hosts, allowing containers to communicate with each other even if they are running on different machines.  
+    Overlay networks can span multiple Docker hosts, allowing containers to communicate with each other even if they  
+    are running on different machines.  
     
 Example: docker network create --driver overlay my-network  
 
 Macvlan networks:   
 ----------------
     Allow containers to be connected to physical network interfaces on the host machine.   
-    This can be useful for containers that need to have direct access to the network, such as containers that are running network monitoring or security applications.  
+    This can be useful for containers that need to have direct access to the network, such as containers that are   
+    running network monitoring or security applications.  
 
 Example: docker network create --driver macvlan my-network  
 
@@ -72,7 +75,8 @@ docker inspect #container-name
       - shows IP, Networks, volumes attached to container
 
 docker exec -it #container-name /bin/bash
-      - allows to login to container & perfom actions like apt update && apt-get install iputils-ping -y = for pining ip to check the connection
+      - allows to login to container & perfom actions like apt update && apt-get install iputils-ping -y =   
+      for pining ip to check the connection
       ping #ip address
             If they are in the same network communicates else will not communicate.
 
