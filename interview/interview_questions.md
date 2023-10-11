@@ -334,4 +334,9 @@ The controller manager is a daemon that runs in the control plane and is respons
 The core control loops are responsible for ensuring that the desired state of the cluster is maintained.  
 The controller manager also runs other controllers, such as the replication controller, the endpoint controller, and the service account controller.  
 --------------------
-
+09-10-2023 US
+---------------
+Intro?
+How are you using kubernetes? for ?
+How are you using Terraform? for ?
+504 ?
