@@ -1,0 +1,49 @@
+doc: https://microk8s.io/#install-microk8s  
+
+The prerequisites for MicroK8s are:  
+------------------------------- 
+
+A 64-bit Linux operating system with a kernel version of at least 4.15.  
+2 vCPUs and 4 GB of RAM per node.  
+20 GB of disk space.  
+An internet connection. 
+
+installation on aws ec2 ubuntu 20.04 LTS:  
+--------------------------
+```
+sudo apt update -y
+sudo apt upgrade -y
+```
+
+MicroK8s
+```
+
+sudo snap install microk8s --classic
+
+microk8s status --wait-ready          - Check the status while Kubernetes starts
+  sudo usermod -a -G microk8s ubuntu
+  newgrp microk8s
+```
+Kubectl installations:
+```
+doc: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/  
+
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl.sha256"
+
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+docs: https://microk8s.io/docs/working-with-kubectl
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
