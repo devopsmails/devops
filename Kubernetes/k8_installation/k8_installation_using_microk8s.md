@@ -34,11 +34,25 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 docs: https://microk8s.io/docs/working-with-kubectl
 ```
+cd $HOME
+mkdir .kube
+cd .kube
+microk8s config > config
+cat config
 
+sudo reboot   - restart the instance
 
+```
 
+Helm installation on EC2-UBUNTU:
+------------------------------
+DOC: https://helm.sh/docs/intro/install/
 
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
 
+helm version
 
 
 
