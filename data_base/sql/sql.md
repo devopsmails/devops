@@ -16,15 +16,31 @@ Non Relational DB
 Diff Relational DB   &  Non Relational DB :  
 -----------------------------------------
 
-Relational DB                                                                         Non Relational DB     
-------------                                                                          ----------------  
+Relational DB                                                                         
+------------                                                                           
 
-1. stores the data in "Table Format(ex:Excel sheet)"                                  1. Stores data in "Json or Key value" ...  
-2. Uses "SQL"                                                                         2. Uses "NO SQL"
+1. stores the data in "Table Format(ex:Excel sheet)"                                
+2. Uses "SQL"                                                                        
+
+
+Non Relational DB 
+-----------------
+ 1. Stores data in "Json or Key value" ...
+ 2. Uses "NO SQL"
+
 
 what software is used to write SQL Statements ?  
 ----------------------------------------
-That is """DBMS"""(Data Base Managemnet System)  
+That is """DBMS"""(Data Base Managemnet System)    
+It's a workspace to wrtie sql statments and work with the databases  
+
+Types of DBMS:
+---------------
+MYSQL
+Microsoft SQL server
+Oracle
+Postgre SQL
+
 
 
 
