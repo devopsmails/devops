@@ -1,4 +1,4 @@
-data base = db
+data base = db 
 
 SQL?
 ---
