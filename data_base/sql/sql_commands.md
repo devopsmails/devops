@@ -24,10 +24,11 @@ are conditions in SQL statement
 
 Special Keywords & Charecters  
 Complex Operations  
-condional Statements & clause (where)  
+condional Statements & clause (where)    
 
-Arithmentic:  additon, subtraction, Multiplication, devision   
-Logical : and, not, between  
-Comparision:  2 diff data , Equal to (=), Lessthan(<), Greater Than(>), >= , <=
-BITWISE:  
-SET:  
+Arithmentic:  additon, subtraction, Multiplication, devision     
+Logical : and, not, between   
+Comparision:  2 diff data , Equal to (=), not equal to (!=), Lessthan(<), Greater Than(>), >= , <=   
+BITWISE:   
+SET:   
+ 
