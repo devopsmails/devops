@@ -172,3 +172,4 @@ git reset 1234567890abcdef
 git reset --hard 1234567890abcdef
 - Discard all of the uncommitted changes in the working directory, and move the HEAD pointer back to the commit with the hash 1234567890abcdef, and discard all of the   
   commits that were made after that commit  
+```
