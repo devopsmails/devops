@@ -1,4 +1,4 @@
-Git-Book_o: https://git-scm.com/book/en/v2
+Git-Book_o: https://git-scm.com/book/en/v2  
 O-Docs:  https://git-scm.com/docs/giteveryday  >> Topics  
 
 
@@ -137,6 +137,7 @@ git resore:
 - To restore files and directories to their previous state.
 - This can be useful for recovering from accidental deletions or changes.
 ```
+(rm S:\Devops\downloading_files_temp\Git\test\test\file2.txt)
 git restore <file or directory path>
 git restore README.md
 
