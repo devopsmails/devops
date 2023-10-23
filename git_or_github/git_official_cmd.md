@@ -174,9 +174,9 @@ git reset --hard 1234567890abcdef
 - Discard all of the uncommitted changes in the working directory, and move the HEAD pointer back to the commit with the hash 1234567890abcdef, and discard all of the   
   commits that were made after that commit  
 ```
-rm:
+git rm:
 ---
-Removes the mentioned files.  
+- Removes the mentioned files.  
 ```
 git rm myfile.txt                           - remove 1 file    
 
@@ -185,3 +185,13 @@ git rm myfile.txt myotherfile.txt           - removes multiple files
 git rm *.txt                                - removes all the files ends with "".txt""  
 
 git rm -r  filedir                          - removes directory recursively  
+```
+git mv:  
+------
+- Moves or renames
+```
+git mv myfile.txt subdir                     - Move a file from one directory to another  
+git mv myfile.txt newfile.txt                - Rename a file  
+git mv mydir subdir                          - Move a directory and all of its contents to another location  
+git mv mydir newdir                          - Rename a directory
+```
