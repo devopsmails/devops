@@ -16,3 +16,7 @@ suresh kumar
 -------------
 SQL DB
 ROOT PWD: Devops@1
+----------
+
+mail: sureshmailsbox@gmail.com
+PWD: DevOps@1
