@@ -24,5 +24,6 @@ PWD: DevOps@1
 ---------------
 AWS conferences  
 --------
-mail: devopsmails1@gmail.com
-pwd:  Devops@Devops@1
+16 November, 2023  
+mail: devopsmails1@gmail.com  
+pwd:  Devops@Devops@1  
