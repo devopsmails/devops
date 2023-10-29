@@ -40,3 +40,11 @@ Fullname: Suresh Kumar Karibasa
 email: devopsmails1@gmail.com
 puname: devopsmails1
 ```
+Splunk:   
+-----
+```
+devopsmails1@gmail.com
+pwd: Devops@Devops1
+suresh kumar
+7981692873
+```
