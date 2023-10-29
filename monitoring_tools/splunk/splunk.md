@@ -123,7 +123,21 @@ search: Splunk for Jenkins Configuration:
   ```
   sudo ufw allow 8088
   sudo ufw status
+  ```
+jenkins continuation:  
+----------------
 ```
+apply >>
+Test connection >>
+result: """Splunk connection verified"""
+```
+Need to restart Jenkins & Splunk for Metrics collection:
+------------------
+```
+Jenkins restart: sudo systemctl resart jenkins or Jenkins webbrowswer: http://18.144.9.120:8080/manage/"""restart""" & enter
+splunk restart: splunk dash board >> settings >> system >> serve controls >> Restart splunk tab >> yes
+---------------------
+
   
 
 
