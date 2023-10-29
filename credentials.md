@@ -32,3 +32,11 @@ VOTERID:  https://ceoandhra.nic.in/ceoap_new/ceo/index.html
 FIRSTNAME: Suresh Kumar  
 Last Name:  Karibasa  
 Password : Indianadmin@1
+---------------
+k8 TRAINING from EDX  
+```
+https://authn.edx.org/register
+Fullname: Suresh Kumar Karibasa
+email: devopsmails1@gmail.com
+puname: devopsmails1
+```
