@@ -27,3 +27,8 @@ AWS conferences
 16 November, 2023  
 mail: devopsmails1@gmail.com  
 pwd:  Devops@Devops@1  
+-----------
+VOTERID:  https://ceoandhra.nic.in/ceoap_new/ceo/index.html  
+FIRSTNAME: Suresh Kumar  
+Last Name:  Karibasa  
+Password : Indianadmin@1
