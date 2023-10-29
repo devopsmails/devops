@@ -47,7 +47,7 @@ Helm installation docs:
 
 ---------------
 Kubernetes:   
-==========  
+==========   
 ```
 Kuber nets api ref docs:    
   https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.27/  
