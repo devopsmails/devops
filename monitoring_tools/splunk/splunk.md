@@ -37,4 +37,55 @@ Enter continuosly till 100%
 yes
 admin username: adminsuresh
 PWD: adminsuresh
+
+sudo ufw allow openSSH
+sudo ufw allow 8000
+sudo ufw status
+sudo ufw enable
+sudo ufw status
+
+sudo /opt/splunk/bin/splunk start
+
+webbroswer:
+PublicIP:8000
+ENTER: USERNAME(adminsuresh) & PWD(adminsuresh)
+
+wait: 1 minute
+can see Splunk Dash Board
+
 ```
+Splunk Dash Board:
+-------------
+Jenkins installation on spluck dashboard:  
+```
+click: apps >> Find more apps >>
+Search: Jenkins >> will get: ""Splunk App for Jenkins"" >>
+install >>
+splunk enterprise login:
+username: devopsmails1@gmail.com #(splunk enterprise login CREDS)
+pwd: Devops@Devops1 #(splunk enterprise login CREDS) >>
+Done >>
+Click: Splunk Enterprise >> can see ""Splunk App for Jenkins"" added.
+```
+jenkins config:
+---------
+```
+splunk Dash board >>
+settings tab >>
+Data >> Data Input >>
+http Event Collector >>
+Global settings tab >>
+enabled >> uncheck: Enable SSL(for practice purpose) >>
+port: same (8088) >>
+save >>
+------------
+new token tab >>
+name: Jenkins >>
+next tab >>
+Review tab >>
+submit tab >>
+search tab >> token would have been createed
+----
+settings tab >> 
+Data >> Data Input >>
+http Event Collector >> we can see the token created >>
