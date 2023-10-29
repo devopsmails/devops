@@ -43,7 +43,7 @@ puname: devopsmails1
 Splunk:   
 -----
 ```
-devopsmails1@gmail.com
+UN: devopsmails1@gmail.com
 pwd: Devops@Devops1
 suresh kumar
 7981692873
