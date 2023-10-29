@@ -1,7 +1,11 @@
 ```
 O-link: https://www.splunk.com/en_us/sign-up.html?redirecturl=https://www.splunk.com/
-YT: https://youtu.be/njTY4tf7ajg?si=scaeCYTysr73W9jG  
+YT: https://youtu.be/njTY4tf7ajg?si=scaeCYTysr73W9jG
 ```
+Create an AWS-EC2-UBUNTU-Instance:
+-----------------------------
+Make sure Jenkins is up and running.(Jenkins instalations: https://github.com/devopsmails/devops/new/main/Jenkins)
+-------------
 aws-ec2-ubuntu-20.04:
 --------------
 ```
