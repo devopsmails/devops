@@ -95,3 +95,33 @@ search tab >> token would have been createed
 settings tab >> 
 Data >> Data Input >>
 http Event Collector >> we can see the token created >>
+```
+Jenkins Dash Board:
+------------------
+```
+manage jenkins >> 
+plugins >>
+avialble plugins tab >>
+search: Splunk >>
+install >>
+--------------
+manage jenkins >>
+system >>
+search: Splunk for Jenkins Configuration:
+  check: enable
+  HTTP Input Host: splunk only public ip: (54.241.148.105)no http or /
+  HTTP Input Port: 8088(while creating on splunk token the port we enable to access)
+  HTTP Input Token: Copy the token from >> splunk dashboard >> settings > data >> data input >> http event collector: copy the token(0f3031ef-d927-4c90-be86-fc26be593381)
+  uncheck: SSL Enabled
+  check: Send All Pipeline Console Logs
+  Jenkins Master Hostname: Jenkins IP ONLY(54.219.51.47)
+  ```
+  on Splunk cli:
+  -------------
+  ```
+  sudo ufw allow 8088
+  sudo ufw status
+```
+  
+
+
