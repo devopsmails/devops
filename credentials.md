@@ -20,3 +20,9 @@ ROOT PWD: Devops@1
 Suresh-F  
 mail: sureshmailsbox@gmail.com  
 PWD: DevOps@1  
+
+---------------
+AWS conferences  
+--------
+mail: devopsmails1@gmail.com
+pwd:  Devops@Devops@1
