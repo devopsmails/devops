@@ -136,8 +136,12 @@ Need to restart Jenkins & Splunk for Metrics collection:
 ```
 Jenkins restart: sudo systemctl resart jenkins or Jenkins webbrowswer: http://18.144.9.120:8080/manage/"""restart""" & enter
 splunk restart: splunk dash board >> settings >> system >> serve controls >> Restart splunk tab >> yes
----------------------
+```
+On splunk dash board """if seen green check mark """ = splunk config with jenkins was set up perfect 
+-----------
 
-  
-
-
+on Jenkins Dashboard:
+---------------
+create some builds like  build1, 2, 3 with few perfect pipeline & few with intentional errors. Once we complete the build we get the whole jenkins metrics on Splunk.  
+Can check metrics on by clicking: """Splunk app for jenkins"""  
+using this we can see complete jenkins build status like number of sucess & failed build by whom with time & date & with many more  
