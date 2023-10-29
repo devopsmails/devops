@@ -217,3 +217,12 @@ Installing Debian PKG:
 unpackage debian  
 sudo dpkg -i splunk-9.1.1-64e843ea36b1-linux-2.6-amd64.deb
 ```
+UFW = Instance firewall defaultly installed  on AWS ec2 ubuntu 
+------------
+```
+sudo ufw allow openSSH
+sudo ufw allow 8000
+sudo ufw status
+sudo ufw enable
+sudo ufw status
+```
