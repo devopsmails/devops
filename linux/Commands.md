@@ -208,3 +208,12 @@ sed ‘5,9p’ filename	To paste 5 to 9 lines
 echo abc | sed ‘s/abc/def/’         	To replace abc with def  
 sed -e ‘s/abc/def/; s/def/ghi/’ file         	To replace multiple things
 sed ‘3c\changed’ filename	To change the 3rd line
+
+debian PKG:
+-----
+```
+Installing Debian PKG:
+    wget -O splunk-9.1.1-64e843ea36b1-linux-2.6-amd64.deb "https://download.splunk.com/products/splunk/releases/9.1.1/linux/splunk-9.1.1-64e843ea36b1-linux-2.6-amd64.deb"
+unpackage debian  
+sudo dpkg -i splunk-9.1.1-64e843ea36b1-linux-2.6-amd64.deb
+```
