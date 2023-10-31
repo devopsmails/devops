@@ -5,7 +5,7 @@ yt: https://youtu.be/pbGA-B_SCVk?si=MZhdC6XCTZABgIn-
 ```
 Instance:
 ---------
-Jenkins
+on Jenkins
 ```
 aws-ec2-ubuntu-22.04
 all-traffic
