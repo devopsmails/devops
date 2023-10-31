@@ -5,7 +5,7 @@ yt: https://youtu.be/pbGA-B_SCVk?si=MZhdC6XCTZABgIn-
 ```
 Instance:
 ---------
-on Jenkins
+on Jenkins cli
 ```
 aws-ec2-ubuntu-22.04
 all-traffic
@@ -61,4 +61,37 @@ Password >>
 j-INSTANCE-p-IP:8080
 UNAME: Admin
 pwd: Admin
+```
+On Sonarqube webbrowser
+```
+j-Instance_p-ip:9000
+Uname: admin
+pwd: admin
+
+Update new pwd:
+---------------
+old pwd: admin
+new pwd: Admin
+confirm pwd: Admin
+update
+```
+on jenkins CLI  
+------------
+Install Trivy  
+---------------
+```
+vi trivy.sh
+----------
+sudo apt-get install wget apt-transport-https gnupg lsb-release -y
+wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | gpg --dearmor | sudo tee /usr/share/keyrings/trivy.gpg > /dev/null
+echo "deb [signed-by=/usr/share/keyrings/trivy.gpg] https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main" | sudo tee -a /etc/apt/sources.list.d/trivy.list
+sudo apt-get update
+sudo apt-get install trivy -y
+----------
+chmod +x trivy.sh
+sh trivy.sh
+```
+
+Create TMDP API KEY:
+----------------
 ```
