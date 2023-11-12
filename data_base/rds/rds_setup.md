@@ -1,4 +1,4 @@
-rds_db_setup_on_ec2:  
+RDS SETUP:  
 N: Before setup dirctly the RDS need create DB subnet groups.  
 
 DB subnets groups set up: 
