@@ -9,6 +9,16 @@ AWS managed Database Instance for one or more databases.
 Supported DB's: MySql, MariaDB, PostgreSql, Oracle, MicrosoftSql.
 Amazon Aurora - This is different from Normal RDS & it's separate AWS product.
 ```
+RDS INSTANCE:
+```
+Database Connects with CNAME. RDS uses standard databases engines.
+The database can be optimized for: db:m5 General, db.r5 memory, db.r3 burst.
+When your provision an instance, you provision storage that is dedicated to that instance. This EBS stroage located in the same AZ.
+RDS is vulnerable to failure in that AZ.
+This storage can be allocated with SSD or magnetic.
+Billing is per instance and hourly rate for that compute. You are billed for storage allocated. 
+
+```
 
 3 tier architecture:
 ```
