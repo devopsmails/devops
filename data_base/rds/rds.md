@@ -1,3 +1,6 @@
+GIT: https://github.com/yeshwanthlm/YouTube/blob/main/aws-rds-masterclass.md#migration-of-database-in-ec2-instance-to-rds-database  
+YT: https://youtu.be/rM_c7K0-tC0?si=VKVhKkARBblR976n
+
 3 tier architecture:
 ```
 Webserver
