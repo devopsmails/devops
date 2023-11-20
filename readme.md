@@ -14,4 +14,5 @@ Designing
     HLD(High Level Desigining): What servers or DB's are required.
     LLD(Low Level Desigining): What feature module ..
 ```
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.simform.com%2Fblog%2Fdevops-lifecycle%2F&psig=AOvVaw1godVfZoJIaK3fG8ZeYVZ6&ust=1700561163094000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCRpY6q0oIDFQAAAAAdAAAAABAE
+![image](https://github.com/devopsmails/devops/assets/119680288/ce32c045-f156-49a8-9ba7-169691b86ab5)
+
