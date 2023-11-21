@@ -342,3 +342,60 @@ Check the targets section
 ```
 http://<ip>:9090/targets
 ```
+
+Install Grafana on Ubuntu 22.04
+--------------------------
+To visualize metrics we can use Grafana. There are many different data sources that Grafana supports, one of them is Prometheus.
+
+First, let's make sure that all the dependencies are installed.
+```
+sudo apt-get install -y apt-transport-https software-properties-common
+```
+Next, add the GPG key.
+
+```
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+```
+Add this repository for stable releases.
+```
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+```
+After you add the repository, update and install Garafana.
+```
+sudo apt-get update
+sudo apt-get -y install grafana
+```
+To automatically start the Grafana after reboot, enable the service.
+```
+sudo systemctl enable grafana-server
+```
+Then start the Grafana.
+```
+sudo systemctl start grafana-server
+```
+To check the status of Grafana, run the following command:
+```
+sudo systemctl status grafana-server
+```
+Go to http://<ip>:3000 and log in to the Grafana using default credentials. The username is admin, and the password is admin as well.
+```
+username admin
+password admin
+changed PWD adminadmin
+```
+When you log in for the first time, you get the option to change the password.
+
+To visualize metrics, you need to add a data source first.
+```
+data source >> 
+  Time series databases >> prometheus(shows prometheus datails)
+  Connection:
+    Prometheus server URL: http://18.144.171.10:9090/(premethes ip:9090)
+    save & test >> Successfully queried the Prometheus API.
+Import dash board: (Visualize)
+  top right + :
+    import dash board >>
+    id: 1860(best for complete info)>> Load:
+                                      select prometheus >> import(show visual info of prometheus server)
+```
+    
