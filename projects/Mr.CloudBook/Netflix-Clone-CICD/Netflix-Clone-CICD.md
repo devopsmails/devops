@@ -483,7 +483,68 @@ Default Content Type: HTML
 Default triggers: always >> 
 apply &  save  
 ```
+=========================
+=========================
+7.Installing plugins openjdk, nodejs, sonarqube
+
+Goto Manage Jenkins >> Plugins >>  Available Plugins >> 
+
+```
+Install below plugins
+
+1 → Eclipse Temurin Installer (Install without restart)
+
+2 → SonarQube Scanner (Install without restart)
+
+3 → NodeJs Plugin (Install Without restart)
+```
+configuring eclipse temurin & nodejs on jenkins tools
+```
+Dashboard >> Manage Jenkins >> Tools:
   
+JDK installations:
+  Add JDK:
+    NAME: jdk17
+      install autometically:
+        Install from adoptium.net:
+          version: jdk-17.0.8.1+1
 
+NodeJS installations:
+Add nodeJs
+  Name: node16
+  Install automatically
+  Install from nodejs.org
+  NodeJS 16.2.0
 
+>> apply & save
+```
+=======================
+========================
+8.Configure Sonar Server in Manage Jenkins
 
+```
+login sonarqube:
+  pub ip: 9000
+sonar Dash board >> Administration >> user >>:
+  token >> name: jenkins >> Generate
+  token = squ_d944ff9c915091ed4f820f2965224e8b31c862d9
+
+Jenkins Dash board:
+  manage jenkins >> Creadentials >> Gloabal >> Secret text >> pate: squ_d944ff9c915091ed4f820f2965224e8b31c862d9 #(secret token)
+  id = sonar-token >> save
+```
+Configuring sonar scanner with jenkins
+
+```
+manage jenkins >> system >> sonar scanners >>
+SonarQube installations:
+  name: sonarqube-server
+  server URL: http://54.151.67.235:9000
+  Server authentication token: SELECT sonar-token >> apply & save
+```
+Configuring sonar version
+```
+manage jenkins >> tools >> Sonar scanners >>
+name: sonar-scanner
+version: Sonarqubescanner: 5.0.1.3006 >> apply & save
+```
