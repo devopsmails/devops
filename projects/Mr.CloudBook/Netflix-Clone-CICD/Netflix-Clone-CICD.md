@@ -1,4 +1,4 @@
-Netflix Clone CI/CD Pipeline | Jenkins | Docker | Kubernetes | Monitoring | DevSecOps  
+Netflix Clone CI/CD Pipeline | Jenkins | Docker | Kubernetes | Monitoring | DevSecOps 
 ```
 Doc Blog: https://mrcloudbook.hashnode.dev/devsecops-netflix-clone-ci-cd-with-monitoring-email
 yt: https://youtu.be/pbGA-B_SCVk?si=MZhdC6XCTZABgIn-
@@ -398,4 +398,41 @@ Import dash board: (Visualize)
     id: 1860(best for complete info)>> Load:
                                       select prometheus >> import(show visual info of prometheus server)
 ```
-    
+Configuring Jenskins server with Premetheus along with grafana
+-----------------------------------------------------------
+```
+Jenkins Dash board: 
+Dashboard >> Manage Jenkins>> 
+Plugins:
+  prometheus metircs:   install
+  Jenkins needs be restarted.
+  same installing plugin page: restart
+  login back to jenkins
+
+Jenkins Dash board:
+  manage jenkins >> system >> search for: Prometheus >>
+      check all boxez(2) except ""Disable metrics"" & with no changes >> save & apply
+```
+Adding Jenkins to prometheus.yml on prometheus server
+```
+sudo vi /etc/prometheus/prometheus.yml
+```
+paste below
+```
+  - job_name: 'jenkins'
+    metrics_path: '/prometheus'
+    static_configs:
+      - targets: ['<jenkins-ip>:8080']
+```
+Syntax check:
+```
+promtool check config /etc/prometheus/prometheus.yml
+```
+Then, you can use a POST request to reload the config.
+```
+curl -X POST http://localhost:9090/-/reload
+```
+prometheus dash board: settings: targets >> refresh: shows jenkins up in 5 sec
+```
+http://18.144.171.10:9090/targets
+```
