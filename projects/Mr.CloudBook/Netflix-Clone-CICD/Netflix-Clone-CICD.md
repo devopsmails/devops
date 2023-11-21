@@ -118,7 +118,7 @@ sudo useradd \
     --no-create-home \
     --shell /bin/false prometheus
 ```
---system - Will create a system account.
+```--system - Will create a system account.
 --no-create-home - We don't need a home directory for Prometheus or any other system accounts in our case.
 --shell /bin/false - It prevents logging in as a Prometheus user.
 Prometheus - Will create a Prometheus user and a group with the same name.
@@ -126,6 +126,7 @@ Prometheus - Will create a Prometheus user and a group with the same name.
 Let's check the latest version of Prometheus from : https://prometheus.io/download/
 
 You can use the curl or wget command to download Prometheus.
+```
 ```
 wget https://github.com/prometheus/prometheus/releases/download/v2.48.0/prometheus-2.48.0.linux-amd64.tar.gz
 tar -xvf prometheus-2.48.0.linux-amd64.tar.gz
