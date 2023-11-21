@@ -95,3 +95,12 @@ sh trivy.sh
 Create TMDP API KEY:
 ----------------
 ```
+Uname: sureshdev1
+PWD: Devops@1
+Account Profile pic >> Settings >> API:
+  Create >>: Developer: Accept >>
+  Type of USE: Desktop Application
+  Application Name: Demo-app
+  submit>>
+  API Key: ff7b18fd132db08968c63c42be8fc12f
+``` 
