@@ -436,3 +436,54 @@ prometheus dash board: settings: targets >> refresh: shows jenkins up in 5 sec
 ```
 http://18.144.171.10:9090/targets
 ```
+======================================
+======================================
+Email Integration with jenkins & plugin setup
+-------------------------------
+```
+Manage jenkins >> Manage plugins >> 
+  install: Email Extension Template
+  open gamil >> propfile >> manage account >> security >> enable 2 step verification
+  gmail>> manage account search: app passwords: 
+    appname: Jenkins >> create
+    pwd: cdcp mrnf snbs wzug
+```
+Adding gmail credentials in jenkins
+---------------------
+Email credential setup on jenkins
+```
+Dashboard >> Manage Jenkins >> Credentials >> System >> Global credentials (unrestricted):
+  username & passwd
+  username: devopsmails1@gmail.com
+  pwd: cdcp mrnf snbs wzug #(gmail create password)
+  id: mail >> create
+```
+Email config & mail Test on jenkins
+----------------------
+```
+Dashboard >> Manage Jenkins >> system search:
+  E-mail Notification
+    SMTP server: smtp.gmail.com
+    advanced:
+      check: Use SMTP Authentication
+        user name: devopsmails1@gmail.com
+        Password:  cdcp mrnf snbs wzug #(gmail create password)
+      check: use ssl
+      SMTP Port: 465
+      check: Test config
+            Test e-mail recipient: devopsmails1@gmail.com   >>  Test configuration
+
+Dashboard >> Manage Jenkins >> system search:
+Extended E-mail Notification:
+SMTP server: smtp.gmail.com
+smto port: 465
+advanced:
+  credential: select cread saved earleir(  user name: devopsmails1@gmail.com )
+Default Content Type: HTML
+Default triggers: always >> 
+apply &  save  
+```
+  
+
+
+
