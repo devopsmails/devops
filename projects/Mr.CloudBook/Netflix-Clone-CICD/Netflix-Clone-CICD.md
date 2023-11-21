@@ -104,8 +104,6 @@ Account Profile pic >> Settings >> API:
   submit>>
   API Key: ff7b18fd132db08968c63c42be8fc12f
 ``` 
-Installing Prometheus on a dedicated server:
-```
 Step 4 — Install Prometheus and Grafana On the new Server
 First of all, let's create a dedicated Linux user sometimes called a system account for Prometheus. Having individual users for each service serves two main purposes:
 
