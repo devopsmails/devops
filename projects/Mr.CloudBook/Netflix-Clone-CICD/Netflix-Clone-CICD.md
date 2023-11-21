@@ -192,6 +192,7 @@ ExecStart=/usr/local/bin/prometheus \
 [Install]
 WantedBy=multi-user.target
 ```
+```
 Let's go over a few of the most important options related to Systemd and Prometheus. Restart - Configures whether the service shall be restarted when the service process exits, is killed, or a timeout is reached.
 RestartSec - Configures the time to sleep before restarting a service.
 User and Group - Are Linux user and a group to start a Prometheus process.
@@ -201,6 +202,7 @@ User and Group - Are Linux user and a group to start a Prometheus process.
 --web.enable-lifecycle -- Allows to manage Prometheus, for example, to reload configuration without restarting the service.
 
 To automatically start the Prometheus after reboot, run enable.
+```
 ```
 sudo systemctl enable prometheus
 sudo systemctl start prometheus
