@@ -1,3 +1,11 @@
+AWS CONSOLE:
+```
+MAIL: awsboxmails2@gmail.com
+pwd: DevOps@1
+UNAME: prasad-devops
+prasad: prasad-ph 8904446395-B-andhra-dbcard-6079090339057212
+```
+
 The below are credentials for diff accounts:  
  
 Docker Hub:  
