@@ -415,7 +415,7 @@ Configuring Jenskins server with Premetheus along with grafana
 Jenkins Dash board: 
 Dashboard >> Manage Jenkins>> 
 Plugins:
-  prometheus metircs:   install
+  Prometheus metrics   install
   Jenkins needs be restarted.
   same installing plugin page: restart
   login back to jenkins
