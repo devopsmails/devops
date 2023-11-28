@@ -559,3 +559,19 @@ manage jenkins >> tools >> Sonar scanners >>
 name: sonar-scanner
 version: Sonarqubescanner: 5.0.1.3006 >> apply & save
 ```
+Configuring jenkins with sonar webhook for providing quality report feedback to Jenkins:
+---------------------------
+```
+sonar dash board >> Configuratins >> Web hooks >> Create >> Name: Jenkins
+                                                            URL: http://51.20.82.52:8080/sonarqube-webhook
+                                                            >> create
+```
+
+Creating a first pipeline:
+----------------
+```
+Jenkins Dash board >> new item >> Enter an item >>
+name: Netflix
+pipeline
+
+                                    
