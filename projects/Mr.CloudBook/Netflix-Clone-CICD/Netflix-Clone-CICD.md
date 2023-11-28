@@ -541,7 +541,7 @@ sonar Dash board >> Administration >> user >>:
   token = squ_584ce430eec35d9e8195b3e230ea72fd5f607aa8
 
 Jenkins Dash board:
-  manage jenkins >> Creadentials >> Gloabal >> Secret text >> pate: squ_d944ff9c915091ed4f820f2965224e8b31c862d9 #(secret token)
+  manage jenkins >> Creadentials >> Gloabal >> Secret text >> pate: squ_584ce430eec35d9e8195b3e230ea72fd5f607aa8 #(secret token)
   id = sonar-token >> save
 ```
 Configuring sonar scanner with jenkins
