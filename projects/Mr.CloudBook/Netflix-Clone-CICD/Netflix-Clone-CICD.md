@@ -168,7 +168,7 @@ sudo chown -R prometheus:prometheus /etc/prometheus/ /data/
 ```
 You can delete the archive and a Prometheus folder when you are done.
 ```
-cd
+cd ..
 rm -rf prometheus-2.47.1.linux-amd64.tar.gz
 prometheus --version
 prometheus --help
