@@ -105,6 +105,7 @@ Account Profile pic >> Settings >> API:
   API Key: ff7b18fd132db08968c63c42be8fc12f
 ``` 
 Step 4 — Install Prometheus and Grafana On the new Server:
+```
 First of all, let's create a dedicated Linux user sometimes called a system account for Prometheus. Having individual users for each service serves two main purposes:
 
 It is a security measure to reduce the impact in case of an incident with the service.
@@ -112,6 +113,7 @@ It is a security measure to reduce the impact in case of an incident with the se
 It simplifies administration as it becomes easier to track down what resources belong to which service.
 
 To create a system user or system account, run the following command:
+```
 ```
 sudo useradd \
     --system \
