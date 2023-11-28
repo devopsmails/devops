@@ -232,7 +232,7 @@ Now we can try to access it via the browser.
 ```
 Go to status >> Targets = How many are connected for monitoring
 -------------------
-Install Node Exporter on Ubuntu 22.04
+Install Node Exporter on prometheous Ubuntu 22.04
 ---------------------------------
 Next, we're going to set up and configure Node Exporter to collect Linux system metrics like CPU load and disk I/O. Node Exporter will expose these as Prometheus-style metrics. Since the installation process is very similar, I'm not going to cover as deep as Prometheus.
 
