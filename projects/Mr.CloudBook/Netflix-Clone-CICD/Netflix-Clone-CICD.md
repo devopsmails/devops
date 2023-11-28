@@ -3,18 +3,27 @@ Netflix Clone CI/CD Pipeline | Jenkins | Docker | Kubernetes | Monitoring | DevS
 Doc Blog: https://mrcloudbook.hashnode.dev/devsecops-netflix-clone-ci-cd-with-monitoring-email
 yt: https://youtu.be/pbGA-B_SCVk?si=MZhdC6XCTZABgIn-
 ```
-Instance:
+Jenkins-Instance:
 ---------
-on Jenkins cli
 ```
 aws-ec2-ubuntu-22.04
 all-traffic
 t2.large
 30 GB mem
 ```
+Grafana-promethous instance:
+------
+```
+aws-ec2-ubuntu-22.04
+all-traffic
+t3.medium
+12 GB mem
+```
+on Jenkins cli
 Long Term Support release
 java installation:
 -------
+
 ```
 sudo apt update -y
 sudo apt install openjdk-17-jdk -y
