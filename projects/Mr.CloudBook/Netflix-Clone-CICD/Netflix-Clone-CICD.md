@@ -433,7 +433,7 @@ paste below
   - job_name: 'jenkins'
     metrics_path: '/prometheus'
     static_configs:
-      - targets: ['<jenkins-ip>:8080']
+      - targets: ['#<jenkins-ip>#:8080']
 ```
 Syntax check:
 ```
