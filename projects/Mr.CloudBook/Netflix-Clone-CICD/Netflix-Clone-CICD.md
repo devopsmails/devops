@@ -354,7 +354,7 @@ Check the targets section
 http://<ip>:9090/targets
 ```
 
-Install Grafana on Ubuntu 22.04
+Install Grafana on Grafana instance Ubuntu 22.04
 --------------------------
 To visualize metrics we can use Grafana. There are many different data sources that Grafana supports, one of them is Prometheus.
 
