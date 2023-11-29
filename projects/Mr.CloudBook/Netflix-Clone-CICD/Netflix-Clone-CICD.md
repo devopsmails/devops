@@ -623,5 +623,16 @@ pipeline{
         }
     }
 }
-
-                                    
+```
+Step 9 — Install OWASP Dependency Check Plugins for Dependency check & vulnerbility:
+------------------
+```
+jenkins >> manage jenkins >> plugins >> name: OWASP Dependency-CheckVersion >> install
+jenkins >> manage jenkins >> tools >> Dependency-Check installations:
+      add Dependency check >>
+          Name: DP-Check
+          install auto >>
+              install from github >> dependency-check-6.5.1  >> apply & save
+```
+OWASP Dependency fs scan & trivy fs scan stages are added to pipeline
+```
