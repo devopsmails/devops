@@ -573,5 +573,55 @@ Creating a first pipeline:
 Jenkins Dash board >> new item >> Enter an item >>
 name: Netflix
 pipeline
+```
+
+jenkinsfile
+```
+pipeline{
+    agent any
+    tools{
+        jdk 'jdk17'
+        nodejs 'node16'
+    }
+    environment {
+        SCANNER_HOME=tool 'sonar-scanner'
+    }
+    stages {
+        stage('clean workspace'){
+            steps{
+                cleanWs()
+            }
+        }
+        stage('Checkout from Git'){
+            steps{
+                git branch: 'main', url: 'https://github.com/Aj7Ay/Netflix-clone.git'
+            }
+        }
+        stage("Sonarqube Analysis "){
+            steps{
+                withSonarQubeEnv('sonar-server') {
+                    // To generate the below command go to sonar dash board >> projects >> manually >> Enter the project name: Netflix, branch: main >> create
+                    // sonar dash board >> projects >> locally >> use existing token: squ_584ce430eec35d9e8195b3e230ea72fd5f607aa8 >> generate
+                    // copy paste the code
+  
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=netflix \
+                    -Dsonar.projectKey=netflix '''
+                }
+            }
+        }
+        stage("quality gate"){
+           steps {
+                script {
+                    waitForQualityGate abortPipeline: false, credentialsId: 'Sonar-token' 
+                }
+            } 
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh "npm install"
+            }
+        }
+    }
+}
 
                                     
