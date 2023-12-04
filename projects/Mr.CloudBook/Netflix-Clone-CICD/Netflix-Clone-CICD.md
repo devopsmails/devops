@@ -917,13 +917,6 @@ only on Worker node
 sudo kubeadm join 172.31.17.52:6443 --token rtjifx.qln40vxbqpwn2vwl \
         --discovery-token-ca-cert-hash sha256:83ee3108fa705b95f5854a320e069d6a72544af517c0df799e535c7c593ff1bf
 ```
-on master node:
-```
-cd .kube/
-Copy the config file to Jenkins master or the local file manager and save it
-copy it and save it in documents or another folder save it as secret-file.txt
----from start api-server to end == ----
-```
 Install k8s plugins on jenkins dash board
 -----------
 ```
@@ -935,5 +928,152 @@ Kubernetes CLI
 Kubernetes Credentials Provider
 >> install
 ```
+Copying kube config file to secretfile and attach to Jenkins creds:
+on master node:
+```
+cd .kube/
+Copy the config file to Jenkins master or the local file manager and save it
+copy it and save it in documents or another folder save it as secret-file.txt
+---from start api-server to end == ----
+```
+Jenkins dash board
+```
+manage jenkins>>
+creds >> global >> add creds >>
+kind: Secret file
+choose: secret-file.txt
+Id: k8s
+```
+Install node port exporter on k8's master & worker nodes
+----------------
+```
+sudo useradd \
+    --system \
+    --no-create-home \
+    --shell /bin/false node_exporter
 
+wget https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz
 
+tar -xvf node_exporter-1.6.1.linux-amd64.tar.gz
+
+sudo mv \
+  node_exporter-1.6.1.linux-amd64/node_exporter \
+  /usr/local/bin/
+
+rm -rf node_exporter*
+
+node_exporter --version
+
+node_exporter --help
+
+sudo vim /etc/systemd/system/node_exporter.service
+-------
+
+[Unit]
+Description=Node Exporter
+Wants=network-online.target
+After=network-online.target
+
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+User=node_exporter
+Group=node_exporter
+Type=simple
+Restart=on-failure
+RestartSec=5s
+ExecStart=/usr/local/bin/node_exporter \
+    --collector.logind
+
+[Install]
+WantedBy=multi-user.target
+
+------------
+sudo systemctl enable node_exporter
+sudo systemctl start node_exporter
+sudo systemctl status node_exporter
+journalctl -u node_exporter -f --no-pager
+
+```
+Add static targets to only on Prometheous server
+```
+sudo vim /etc/prometheus/prometheus.yml
+---
+- job_name: node_export_k8_master
+    static_configs:
+      - targets: ["51.20.249.174:9100"]
+
+  - job_name: node_export_k8_worker
+    static_configs:
+      - targets: ["13.49.80.9:9100"]
+
+------------
+promtool check config /etc/prometheus/prometheus.yml
+
+curl -X POST http://localhost:9090/-/reload
+
+prometheous ip:9090/targets
+
+```
+Deployting to container:
+----------
+
+pipeline +
+-------
+```
+stage('Deploying to container'){
+            steps {
+                sh "docker run -d --name netflix sureshdevops1/netflix:latest"
+            }
+        }
+```
+
+Deploying to Kubernetes:
+```
+Change dir syntax:
+-----
+pipeline syntax generator:
+changedir >>
+path: kubernetes (bcz file is in same github directory if not in same need to provide the complete path here)
+generate
+copy
+dir('Kubernetes') {
+//
+}
+----------
+generate kube config syntax
+-------
+pipeline syntax generator>>
+withKubeConfig >> select secret file: secret-file.txt >> generate
+copy >>
+withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
+//
+} paste
+--------------
+Enter the kubectl executions commands for deploy & service.yml
+----------
+stage ('Deploying to K8s'){
+            steps {
+                script{
+                    dir('Kubernetes') {
+                        withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s', namespace: '',  
+                         restrictKubeConfigAccess: false, serverUrl: '') {
+                            sh "kubectl apply -f deployment.yml"
+                            sh "kubectl apply -f service.yml"
+                        }
+                    }
+                }
+            }
+        }
+
+----------------
+```
+Master:
+kubectl get svc
+netflix app: 30007
+browse worker node public ip:30007
+
+Finally seen the success
+
+<img width="944" alt="image" src="https://github.com/devopsmails/devops/assets/119680288/567220db-2e46-46cf-8c88-bdb07cf1a71a">
