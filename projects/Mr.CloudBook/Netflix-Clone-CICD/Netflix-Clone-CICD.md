@@ -1075,5 +1075,6 @@ netflix app: 30007
 browse worker node public ip:30007
 
 Finally seen the success
-<img width="960" alt="image" src="https://github.com/devopsmails/devops/assets/119680288/b3a57bf0-f5e8-49c5-9b8f-8c9c8378f7d4">
+![image](https://github.com/devopsmails/devops/assets/119680288/13f4c69c-fdb1-4e1a-9c09-e0d59a58cb1e)
+
 
