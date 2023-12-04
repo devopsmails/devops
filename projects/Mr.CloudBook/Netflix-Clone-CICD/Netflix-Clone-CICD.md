@@ -849,3 +849,91 @@ pipeline{
     }
 }
 ```
+-----------------------------------
+Step 11 — Kuberenetes Setup
+Connect your machines to Putty or Mobaxtreme
+
+Take-Two Ubuntu 20.04 instances one for k8s master and the other one for worker.
+
+Install Kubectl on Jenkins machine also.
+
+Kubectl is to be installed on Jenkins also+-
+```
+vi kube.sh
+-----------
+sudo apt update
+sudo apt install curl -y
+curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --client
+---
+chmod +x kube.sh
+./kube.sh
+---
+```
+Launch 2 ec2 ubuntu 20.04 LTS instances for K8'S Master & Worker:
+---
+```
+ubuntu 20.04
+all trafic
+t3.medium
+no of instances 2 >> launch instances
+```
+k8's Master & Worker node:
+----------
+```
+sudo apt-update -y
+sudo hostnamectl set-hostname Master/Worker
+exec bash(Reloads)
+sudo apt install docker.io -y
+sudo usermod -aG docker ubuntu
+newgrp docker
+sudo chmod 777 /var/run/docker.sock
+sudo curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
+sudo tee /etc/apt/sources.list.d/kubernetes.list <<EOF
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo snap install kube-apiserver
+```
+Only on Master node
+-----------
+```
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+kubectl get nodes
+```
+only on Worker node
+---------
+```
+sudo kubeadm join 172.31.17.52:6443 --token rtjifx.qln40vxbqpwn2vwl \
+        --discovery-token-ca-cert-hash sha256:83ee3108fa705b95f5854a320e069d6a72544af517c0df799e535c7c593ff1bf
+```
+on master node:
+```
+cd .kube/
+Copy the config file to Jenkins master or the local file manager and save it
+copy it and save it in documents or another folder save it as secret-file.txt
+---from start api-server to end == ----
+```
+Install k8s plugins on jenkins dash board
+-----------
+```
+plugins >>Avail plugins : 
+Kubernetes
+Kubernetes Client API
+Kubernetes Credentials
+Kubernetes CLI
+Kubernetes Credentials Provider
+>> install
+```
+
+
