@@ -28,9 +28,12 @@ On any linux flavour :
 
 aws cli: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html    
  -------------Commands from the above link---------  
+ ```
   curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"  
+  sudo apt install unzip
   unzip awscliv2.zip  
-  sudo ./aws/install  
+  sudo ./aws/install
+```
   ------------------------------
  aws --version (shows the aws cli version & python version if it's installed)  
 
