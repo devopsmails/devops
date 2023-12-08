@@ -3,27 +3,7 @@
  ```
 vi /etc/grafana/grafana.ini
  ---------------------
-Change 1 to 2
- ```
-1. #################################### SMTP / Emailing ##########################
-[smtp]
-;enabled = false
-;host = localhost:25
-;user =
-# If the password contains # or ; you have to wrap it with triple quotes. Ex """#password;"""
-;password =
-;cert_file =
-;key_file =
-;skip_verify = false
-;from_address = admin@grafana.localhost
-;from_name = Grafana
-# EHLO identity in SMTP dialog (defaults to instance_name)
-;ehlo_identity = dashboard.example.com
-# SMTP startTLS policy (defaults to 'OpportunisticStartTLS')
-;startTLS_policy = NoStartTLS
-```
-2.
-```
+/smtp
 #################################### SMTP / Emailing ##########################
 [smtp]
 **enabled = true **
@@ -41,4 +21,11 @@ Change 1 to 2
 # SMTP startTLS policy (defaults to 'OpportunisticStartTLS')
 ;startTLS_policy = NoStartTLS
 ```
-[emails]
+install grafana-image-renderer plugin to send an image through mail
+on grafana server
+```
+grafana-cli plugins install grafana-image-renderer
+
+sudo service grafana-server restart
+```
+ 
