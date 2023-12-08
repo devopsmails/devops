@@ -10,7 +10,7 @@ vi /etc/grafana/grafana.ini
 **host = smtp.gmail.com:465**
 **user = devopsmails1@gmail.com**
 # If the password contains # or ; you have to wrap it with triple quotes. Ex """#password;"""
-**password = cdcp mrnf snbs wzug**
+**password = cdcpmrnfsnbswzug** (With out spaces)
 ;cert_file =
 ;key_file =
 **skip_verify = true**
