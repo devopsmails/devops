@@ -1,0 +1,38 @@
+What is scripting?
+
+One or more shell or linux CLI commands written in order to achieve the expected results.
+
+Types of scripting: 
+
+There are two scripting languages used by the DevOps engineers 
+```
+1. Bash scripting 
+2. Python scripting 
+```
+1.Bash scripting: 
+-------------- 
+``` 
+It works only for Linux servers hence it doesn't support for windows to access the servers 
+Scripting file will end with ".sh"
+``` 
+
+2. Python scripting: 
+---------- 
+``` 
+Python scripting is simple to achieve the complex works
+Python supports both the Linux and Windows servers. 
+Python also gives more flexibility to work and create the more complex scripts, API calls and so on 
+Python file ends with ".py" 
+```
+Shell execution:
+
+```
+all permissions
+./filename.sh
+```
+python Execution:
+
+```
+all permissions
+python3 filename.py
+'''
