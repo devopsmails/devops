@@ -1,6 +1,7 @@
 What is scripting?
 
-One or more shell or linux CLI commands written in order to achieve the expected results.
+One or more shell or linux CLI commands written in order to achieve the expected results or to automate.
+Helps to perform repetative tasks.
 
 Types of scripting: 
 
