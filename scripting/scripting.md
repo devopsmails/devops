@@ -19,9 +19,8 @@ Scripting file will end with ".sh"
 2. Python scripting: 
 ---------- 
 ``` 
-Python scripting is simple to achieve the complex works
-Python supports both the Linux and Windows servers. 
-Python also gives more flexibility to work and create the more complex scripts, API calls and so on 
+Python scripting is simple to achieve the complex programmes, API calls & Data manipulations.
+Python supports both the Linux and Windows servers.
 Python file ends with ".py" 
 ```
 Shell execution:
