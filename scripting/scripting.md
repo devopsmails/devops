@@ -15,6 +15,7 @@ There are two scripting languages used by the DevOps engineers
 ``` 
 It works only for Linux servers hence it doesn't support for windows to access the servers 
 Scripting file will end with ".sh"
+Use for System admin tasks: disk free
 ``` 
 
 2. Python scripting: 
