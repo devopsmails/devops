@@ -1,7 +1,3 @@
-Functions uses:
-1.Readability
-2.Re-usability(Modules)
-3.Easy-debugging
 
 Python Functions, Modules and Packages
 1. Differences Between Functions, Modules, and Packages
