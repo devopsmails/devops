@@ -1,44 +1,44 @@
 
-# functions.py
-# -----
-# ```
-# n1 = 10
-# n2 = 5
+functions.py
+-----
+```
+n1 = 10
+n2 = 5
 
-# def add():
-#     a = n1 + n2
-#     print(a)
+def add():
+    a = n1 + n2
+    print(a)
 
-# def sub():
-#     s = n1 - n2
-#     print(s)
+def sub():
+    s = n1 - n2
+    print(s)
 
-# def mul():
-#     m = n1 * n2
-#     print(m)
+def mul():
+    m = n1 * n2
+    print(m)
 
-# def div():
-#     d = n1 / n2
-#     print(d)
+def div():
+    d = n1 / n2
+    print(d)
 
-# add()
-# sub()
-# mul()
-# div()
-# ```
+add()
+sub()
+mul()
+div()
+```
 
-# #invoking functions in modules
+#invoking functions in modules
 
-# #modules.py
+#modules.py
 
-# ```
-# import functions as calc
+```
+import functions as calc
 
-# cal.add()
-# ```
+cal.add()
+```
 
-# #creating the modules directly
-# #modules1.py
+#creating the modules directly
+#modules1.py
 
 def add(n1, n2):
     a = n1 + n2
