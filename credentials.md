@@ -1,3 +1,10 @@
+AWS Builder ID:
+-----------
+```
+MAIL: Devopsmails1@gmail.com
+name: Karibasa Suresh Kumar
+pwd: DevOps@1
+
 AWS CONSOLE:
 ```
 MAIL: awsboxmails2@gmail.com
