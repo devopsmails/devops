@@ -1,3 +1,9 @@
+Jira:
+-----
+mail: Devopsmails1@gmail.com
+site: Devopsmails1@gmail.com
+
+
 AWS Builder ID:
 -----------
 ```
