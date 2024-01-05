@@ -1,3 +1,12 @@
+networking:
+------
+netstat -tnlpu             - To know the ports used
+ss -tnlpu                  - more advanced to know the ports are used
+
+
+ps                         - list the running services
+kill -9 PID                - Kills immediatly
+
 
 sudo hostnamectl set-hostname JENKINS-SERVER    - To change the hostname to Jenkins_server   
 sudo systemctl reboot                           - To reboot the system  
