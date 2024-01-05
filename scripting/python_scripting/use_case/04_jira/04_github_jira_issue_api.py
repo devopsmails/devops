@@ -16,7 +16,6 @@ def createJira():
     response = requests.get(git_hub_repo_url)
     comments = response.json()
     comment_value = comment['body']
-    if c
     for comment in comments:
         comment_author = comment["user"]["login"]
         comment_value = comment['body']
