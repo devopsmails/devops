@@ -45,18 +45,31 @@ output:
 ------
 Api Address: http://0.0.0.0:8200
 Storage: inmem
-Unseal Key: wvcDhpMDfotxFkxwE9nncKdThlX/DkB4xYo/yrTH62s=
-Root Token: hvs.mbZKU8X6yxjp6SEzBB2l6RZ6
+Unseal Key: GsygUy7GSg5LXmh5Ux1eZe02Cb96oI8H/rTLXfBAv1U=
+Root Token: hvs.OaGgvDtehkxsUrLbIcQ2OwO5
 ```
+On a dubplicate tab of the same server:
+
 Step 2 : Set VAULT_ADDR by exporting to environment variable 
 ```
 export VAULT_ADDR='http://0.0.0.0:8200'
 ```
-Step 3 : Set Root Token by exporting to environment variable 
+No need of step 3
+/####.Step 3 : Set Root Token by exporting to environment variable 
 ```
-export VAULT_TOKEN="hvs.T65j6lh8T91CjP9SjDpVT7y0"(#root token)
+export VAULT_TOKEN="hvs.OaGgvDtehkxsUrLbIcQ2OwO5"(#root token)\.####
 ```
+
 Step 4 : Verify the status of vault server by running the command 
 ```
 vault status
+```
+
+webbroswer:
+
+```
+vault pub IP:8200 port enabled
+vault web:
+type: Token
+token: hvs.OaGgvDtehkxsUrLbIcQ2OwO5(#Root token) >> Vault UI Dash board
 ```
