@@ -1,3 +1,9 @@
+DevOps related details notes from Rahul:
+```
+https://jhooq.com/
+```
+
+
 Github:    
 =======
 ```
