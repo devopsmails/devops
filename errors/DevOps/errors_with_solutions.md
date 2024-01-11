@@ -1,9 +1,9 @@
 01_minikube:
 ------------
 if nodeport or Load Balencer is not accessble on webbrowser
-sol:
 ----
 ```
+sol:
 kubectl port-forward svc/argocd-server -n argocd --address 0.0.0.0 8089:443
     > port-forward: forwarding service to port 8089
     > svc/argocd-server: Service name to forward
