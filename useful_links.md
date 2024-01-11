@@ -1,3 +1,10 @@
+Argo CD O_docs_installation:
+--------------------------
+```
+https://argo-cd.readthedocs.io/en/stable/getting_started/c
+```
+
+
 DevOps related details notes from Rahul:
 ```
 https://jhooq.com/
