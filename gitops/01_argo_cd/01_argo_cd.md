@@ -8,7 +8,8 @@ argocd type tools = Flux, spinnakar, Jenkinx
 
 
 GitOps - Architecture:
-![Alt text](argocd_architecture.webp)
+![image](https://github.com/devopsmails/devops/assets/119680288/d0c0f755-7158-43cf-9aa1-645840905927)
+
 
 ```
 API Server: 
