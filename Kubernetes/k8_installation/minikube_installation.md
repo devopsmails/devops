@@ -8,6 +8,16 @@ Install Kubectl
 Install Minikube    
    
 
+What you’ll need:
+-------------
+```
+2 CPUs or more
+2GB of free memory
+20GB of free disk space
+Internet connection
+Container or virtual machine manager, such as: Docker,
+```
+
 on AWS EC2 ubuntu 20.04: 
 -----------
 sudo apt update -y  
@@ -15,7 +25,7 @@ sudo apt-get upgrade -y
 
 docker installation:   
 -------------------
-sudo apt install docker.io  -y  
+sudo apt install docker.io -y  
 
 sudo usermod -aG docker ubuntu && newgrp docker 
 sudo chmod +x /var/run/docker.sock  
