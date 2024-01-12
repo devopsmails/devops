@@ -1,7 +1,12 @@
 Argo CD O_docs_installation:
 --------------------------
 ```
-https://argo-cd.readthedocs.io/en/stable/getting_started/c
+https://argo-cd.readthedocs.io/en/stable/getting_started/
+
+Argp CD CLI install:
+---------------
+o_docs: https://argo-cd.readthedocs.io/en/stable/cli_installation/
+
 ```
 
 
