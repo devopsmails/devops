@@ -25,3 +25,15 @@ Metrics Server:
 UI (Optional): 
     Web interface for managing applications, resources, and cluster configurations.
 ```
+Argo CD Deployment model types:
+------------
+1.Hub Spoke deployment model: 
+```
+github <----- argocd(responsible for all clusters) -------> Cluster 1, 2., 3 ...
+
+```
+2.Standalone deployment model:
+------
+```
+github <----- argocd Cluster (responsible only for one cluster)
+```

@@ -4,7 +4,7 @@ What is Argo cd CLI?
 Argo cd CLI helps to acts as any other tools cli to perform actions through commands
 ```
 
-01_Argo Cli Installation:
+01_Argo cd Cli Installation:
 ---------------------
 o_docs: https://argo-cd.readthedocs.io/en/stable/cli_installation/
 

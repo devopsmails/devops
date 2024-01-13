@@ -32,3 +32,14 @@ mention the same #dusername/appname:v1 in deployment.yml at images
 CMD: kubectl apply -f deployment.yml  
 kubectl get pods (5 sec will be in running status)  
 ```
+03_aws eksctl:  
+error:  
+```
+2024-01-13 13:47:36 [✖]  creating CloudFormation stack "eksctl-hub-cluster-cluster": operation error CloudFormation: CreateStack, https response error StatusCode: 400, RequestID: 5e2bc729-fda2-425c-9241-2bb6bac42306, AlreadyExistsException: Stack [eksctl-hub-cluster-cluster] already exists
+
+sol:
+need to same region cloudformation stack delete the error causing name if exists
+else:
+delete the cluster once again try
+```
+

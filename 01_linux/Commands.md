@@ -1,3 +1,8 @@
+decoding command:
+```
+echo dWFnandld0FjdUp1MjQwOQ== | base64 --decode
+```
+
 networking:
 ------
 netstat -tnlpu             - To know the ports used
