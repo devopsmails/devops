@@ -15,12 +15,14 @@ Hub: A single Argo CD instance serves as the central control point for managing 
      clusters.
 Spokes: Individual Kubernetes clusters act as spokes, connecting to the central hub.
 ```
+```
 Instance: ubuntu >> t3.large(2 cpu 8 ram, memo 20, alltraffic)
 prerequisites:
 
 kubectl – A command line tool for working with Kubernetes clusters. For more information, see Installing or updating kubectl. 
 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 
+```
 ```
 eksctl – A command line tool for working with EKS clusters that automates many individual tasks. For more information, see Installing or updating. 
 https://docs.aws.amazon.com/emr/latest/EMR-on-EKS-DevelopmentGuide/setting-up-eksctl.html
@@ -48,7 +50,7 @@ aws --version
 aws configure
 access key:
 secret access key:
-
+```
 EKS Setup:
 --------------  
 EKS Clusters Creation
@@ -210,7 +212,7 @@ kubectl get all
 
 ```
 
-EKS Clusters Deletion
+EKS Clusters Deletion if it's demo
 ```
 eksctl delete cluster --name hub-cluster --region us-west-1
 
