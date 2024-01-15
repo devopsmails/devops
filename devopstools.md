@@ -17,5 +17,5 @@ TRIVY
 Helm
 Jfrog
 Terraform
-
+Gitops - Argo CD
 ```
