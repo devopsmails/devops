@@ -9,11 +9,13 @@ Jenkins
 Ansible
 Docker
 Kubernetes
-Servicenow
+Jira
 Prometheous
 Grafaana
 AWS
 TRIVY
 Helm
-Web server - Nginx
+Jfrog
+Terraform
+
 ```
