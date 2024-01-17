@@ -1,3 +1,5 @@
+newgrp #groupname (kubnertes/docker/ubuntu) - Reboots the group info
+
 decoding command:
 ```
 echo dWFnandld0FjdUp1MjQwOQ== | base64 --decode

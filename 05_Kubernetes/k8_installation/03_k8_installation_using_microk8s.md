@@ -41,7 +41,7 @@ microk8s config > config
 cat config
 
 sudo reboot   - restart the instance
-
+kubectl get all 
 ```
 
 Helm installation on EC2-UBUNTU:
