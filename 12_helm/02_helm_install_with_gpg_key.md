@@ -1,3 +1,11 @@
+pre-requisites:
+--------
+```
+aws ec2 ubuntu:22.04 LTS, 2 cpu 4 RAM, 20 Mem
+
+
+```
+
 docs: https://helm.sh/docs/intro/install/  
 
 Installation on Helm on Ec2_ubuntu:
