@@ -1,3 +1,5 @@
+hostname -i             - shows private ip of server
+
 Linux AWS EC2 Ubuntu system logs:
 ---------
 

@@ -1,3 +1,5 @@
+https://jhooq.com/getting-start-with-helm-chart/
+
 The prerequisites for MicroK8s are:  
 ------------------------------- 
 

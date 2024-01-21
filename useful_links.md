@@ -61,6 +61,7 @@ https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2.h
 Helm installation docs:  
 ```
   https://helm.sh/docs/intro/install/  
+  https://jhooq.com/getting-start-with-helm-chart/
 ```
 
 ---------------
