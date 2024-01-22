@@ -25,3 +25,8 @@ web:
     publicip:31209
     Token: paste >> login >> We can see the K8's dash board
 ```
+
+ErrImagePull
+```
+
+```
