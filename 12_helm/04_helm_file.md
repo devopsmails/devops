@@ -96,4 +96,56 @@ helm list -a
 vi helmfile.yaml
 ----------
 installed: false
+
+helmfile sync - deletes
+helm list -a
 ```
+
+DEPLOY MULTIPLE HELMCHARTS USING HELMFILE
+
+```
+space > helmfile.yaml
+
+vi helmfile.yaml
+---------------
+---
+releases:
+  - name: helloworld1
+    chart: ./helloworld1
+    installed: true
+
+  - name: helloworld2
+    chart: ./helloworld2
+    installed: true
+
+helmfile sync
+helm list -a
+
+vi helmfile.yaml
+---------
+installed: false
+
+helmfile sync     - deletes helmcharts
+helm list -a
+```
+HOW TO USE HELM REPO (OPEN SOURCE PRE-CREATED HELM CHARTS):
+---------
+```
+helm search hub wordpress       - wordpress = helmchart repo name
+  > list the pre-defined helm charts related with name
+  > We can used version we want
+
+helm search hub wordpress --max-col-width=0   - shows the complete url of a repo
+
+helm repo list                  - shows the used repos list
+helm repo add bitnami https://charts.bitnami.com/bitnami    - add the bitnami repo
+helm repo list
+
+helm show readme bitnami/wordpress --version 15.2.13      
+  > shows the complete instructions of repo how to install
+ 
+helm show values bitnami/wordpress --version 10.0.3
+```
+
+HELM HOOK & HELM TEST
+----
