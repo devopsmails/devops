@@ -156,4 +156,5 @@ kubectl get deployments
 kubectl get svc         - enable svc port on ec2 sg
   > Then access on web pubip:31175/hello
 
-```
+``` 
+
