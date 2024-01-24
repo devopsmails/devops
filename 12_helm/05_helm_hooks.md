@@ -1,12 +1,11 @@
 O-doc: https://helm.sh/docs/topics/charts_hooks/  
+
 <img width="492" alt="chrome_SuyiUOhZXe" src="https://github.com/devopsmails/devops/assets/119680288/496d30af-238b-4c2b-93f4-b394efbb2830">
 
 What is helm hooks?
 ```
  Helm hooks are a mechanism for running operations at specific points during the Helm chart's lifecycle. 
  Helm hooks allow you to define and execute actions before or after certain events, such as before installing or upgrading a release.
- IMAGE:
-
 
 ```
 WHEN TO USE HELM HOOKS?
