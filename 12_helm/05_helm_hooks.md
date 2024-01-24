@@ -5,6 +5,7 @@ What is helm hooks?
  Helm hooks are a mechanism for running operations at specific points during the Helm chart's lifecycle. 
  Helm hooks allow you to define and execute actions before or after certain events, such as before installing or upgrading a release.
  IMAGE:
+https://i.imgur.com/vkypTg2.png
 
 ```
 WHEN TO USE HELM HOOKS?
