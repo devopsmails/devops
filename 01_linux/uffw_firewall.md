@@ -1,5 +1,4 @@
 
-
 sudo -i
 apt update -y
 apt upgrate -y

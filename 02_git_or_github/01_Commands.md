@@ -1,3 +1,11 @@
+diff b/w git fetch & git pull?
+----
+```
+Git fetch: 
+    > get the changes from remote to local & doesn't merge. Used for preview change & merge if required
+git pull: Get & merges the changes from remote to local repo. Useful for quick updates merge
+```
+
 Creating
 adding
 modifying
