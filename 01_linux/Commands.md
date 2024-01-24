@@ -1,3 +1,5 @@
+
+
 newgrp #groupname (kubnertes/docker/ubuntu) - Reboots the group info
 sudo mv helmfile /usr/local/bin         - to run from anywhere in the terminal
 space > helmfile.yaml       - clears the complete file info
