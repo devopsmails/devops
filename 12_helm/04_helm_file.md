@@ -146,6 +146,3 @@ helm show readme bitnami/wordpress --version 15.2.13
  
 helm show values bitnami/wordpress --version 10.0.3
 ```
-
-HELM HOOK & HELM TEST
-----
