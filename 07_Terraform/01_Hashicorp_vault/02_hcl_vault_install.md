@@ -7,6 +7,9 @@ AWS AMI: UBUNTU: 8200 port sg
 Basic free config: t3 micro, 
 mem: 8
 ```
+```
+O-Doc: https://developer.hashicorp.com/vault/tutorials/getting-started/getting-started-install
+```
 Update the package manager and install GPG and wget.
 ```
 sudo apt update && sudo apt install gpg wget -y
