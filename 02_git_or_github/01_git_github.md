@@ -1,9 +1,9 @@
-Version control system:
+Version control system: 
 ```
    Sharing code: possible to share code with multiple users
    Versioning: easy to rollback or rollout & track the changes
 ```
-SVN VS GIT:
+SVN VS GIT: 
 ```
 SVN:
   > follows Centralized system.
@@ -53,40 +53,7 @@ git commit
 git push -u origin main
 vi calculator.sh(x=a+b+c)
 git diff
-git log
+git logs
 git reset --hard #commit id - to go back to previous version
-cat calculator.sh
-git remote add name url
-git clone url
-git clone url(https) If it ssh >> ssh-keygen copy id_rsa.pub >> github settings >>  ssh >> save with the name
-
-git branch
-git branch #name
-git checkout -b #name
-git checkout main
-git log      - shows only main fetaure none other branch features
-git log feature      = git checkout feature && git log
-git log feature --oneline --graph      - shows in single lined commits
+cat calculator.sh  
 ```
-clone vs fork
-----
-```
-clone: 
-   > Download a repository
-Fork:
-   > Copies a repo
-```
-Git cherry-pick vs merge vs rebase
-----
-```
-git cherry-pick:
-   > Helps to pick a single commit from any other branch
-   > ex: feature branch has 3 commit but main has only 1 commit
-      > git checkout feature - switches to feature branch
-      > git log   - shows all the commits (copy one commit id)
-      > git checkout main
-      > git cherry-pick #commitid
-      > git log      - now we can see cheery picked commit with the new commit id
-      > git cherry-pick #commitid and #commitid
-```
-
