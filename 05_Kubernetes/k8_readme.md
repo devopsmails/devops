@@ -1,6 +1,6 @@
 GH: 
 YT: https://youtu.be/dfxrdoEQe00?si=vEeiBmD8gwHdysYs 
-
+```
 Containers:
 ----------
 
@@ -12,18 +12,18 @@ runs on Single hosts                           -           As K8 is installed on
 Doesn't have Auto-scalling                     -           k8 has HPA(Horizental Pod Autoscaler) will increase the space or create new container for huge trafic.
 No Auto Healing                                -           Auto Healing controls & fix the damage by creating a new pod/container with instruction API-server
 No Enterprise level support
-
+```
 
 Cluster = Group of Nodes
-
+```
 K8's Archetecture:
 -----------------
 Master - K8 will be installed
 Nodes -  Master will make use of nodes install pods as per requests.
-
+```
      K8's
 ===================                                                                  
-
+```
  Master Node / Control Plane  
 =========================  
 API-Server:
@@ -61,3 +61,4 @@ Kube-proxy:
 -----------
         cares networkinG, create the IP address & Loadbalancing,                   - Networking: Bridge 
         Using linux IP Tables for networking.
+```
