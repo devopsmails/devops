@@ -10,6 +10,7 @@ echo dWFnandld0FjdUp1MjQwOQ== | base64 --decode
 
 networking:
 ------
+```
 netstat -tnlpu             - To know the ports used
 ss -tnlpu                  - more advanced to know the ports are used
 
@@ -227,7 +228,7 @@ sed ‘5,9p’ filename	To paste 5 to 9 lines
 echo abc | sed ‘s/abc/def/’         	To replace abc with def  
 sed -e ‘s/abc/def/; s/def/ghi/’ file         	To replace multiple things
 sed ‘3c\changed’ filename	To change the 3rd line
-
+```
 debian PKG:
 -----
 ```
