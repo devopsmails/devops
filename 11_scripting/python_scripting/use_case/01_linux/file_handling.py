@@ -35,3 +35,17 @@ def server_config_update(file_path, key, value):
                 file.write(line)
         
 server_config_update("./server.conf", "PORT", "9000" ) #9000 will changes at variable port 
+
+###2.Word Replacing in a file###
+def word_replace(file_path, old_word, new_word):
+    with open(file_path,'r') as file:
+       content=file.readlines()
+    modified_content = content.replace(old_word, new_word)
+    with open(file_path, 'w')as file:
+        file.write(modified_content)
+        
+file_path =/temp/main.tf
+old_word = aws
+new_word = ibm
+
+word_replace(file_path, old_word, new_word)
